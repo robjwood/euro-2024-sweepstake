@@ -1,0 +1,38 @@
+/* HEADINGS
+===========================================
+===========================================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-accent);
+  line-height: var(--line-height-xs);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--font-size-2xl);
+  letter-spacing: -0.04em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  letter-spacing: -0.008em;
+}
+
+h3 {
+  font-size: var(--font-size-l);
+}
+
+h4 {
+  font-size: var(--font-size-m);
+}
+
+h5 {
+  font-size: var(--font-size-s);
+}

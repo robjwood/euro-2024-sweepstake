@@ -1,0 +1,23 @@
+/* CODE
+===========================================
+===========================================*/
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 0.9em;
+}
+
+code {
+  background-color: var(--color-code-background);
+  color: var(--color-code-text);
+  border-radius: 4px;
+  padding: 1px 5px 3px;
+}
+
+pre > code {
+  background-color: transparent;
+  color: var(--grey-200);
+}
+

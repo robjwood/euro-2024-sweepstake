@@ -1,0 +1,15 @@
+/* CLUSTER
+===========================================
+===========================================*/
+[class^='o-cluster'] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-l);
+  justify-content: flex-start;
+  align-items: center;
+}
+
+  /* Size variants */
+  .o-cluster--1 {
+    gap: var(--space, 1rem);
+  }

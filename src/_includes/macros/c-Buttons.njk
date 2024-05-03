@@ -1,0 +1,114 @@
+{% macro button(params) %}
+  {# Set class for this component #}
+  {%- set classNames = "c-btn " -%}
+
+
+  {# Create key called 'purpose' #}
+  {%- if params.purpose %}
+    {% set purpose = params.purpose %}
+  {% endif %}
+
+  {# Set different classes based on the purpose #}
+  {%- if purpose == 'secondary' %}
+    {% set classNames = classNames + "c-btn--secondary" %}
+
+  {%- elseif purpose == 'tertiary' %}
+    {% set classNames = classNames + "c-btn--tertiary" %}
+
+
+  {%- else %}
+    {% set classNames = classNames + "c-btn--primary" %}
+  {%- endif %}
+
+  {# Create key called size #}
+  {%- if params.size %}
+    {% set size = params.size %}
+  {% endif %}
+
+  {# Set different classes based on the specified size. If no size is set, the button uses the default size at the bottom #}
+  {%- if size == 'small' %}
+    {% set classNames = classNames + " c-btn--s" %}
+
+  {%- else %}
+    {% set classNames = classNames + "" %}
+
+  {%- endif %}
+
+
+  {# Create key called 'action' #}
+  {%- if params.action %}
+    {% set action = params.action %}
+  {% endif %}
+
+
+
+  {% if params.disabled %}
+    {% set classNames = classNames + " c-btn--disabled" %}
+  {% endif -%}
+
+  {# Determine type of element to use, if not explicitly set #}
+  {%- if params.element %}
+    {% set element = params.element | lower %}
+  {% else %}
+    {% if params.href %}
+      {% set element = 'a' %}
+
+    {% elseif params.close %}
+      {% set element = 'close' %}
+    {% else %}
+
+      {% set element = 'button' %}
+    {% endif %}
+  {% endif -%}
+
+  {#- Define common attributes that we can use across all element types #}
+  {%- set commonAttributes %} class="{{ classNames }}" data-module="button"{% for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}{% endset %}
+
+  {#- Define common attributes we can use for both button and input types #}
+  {%- set buttonAttributes %}{% if params.name %} name="{{ params.name }}"{% endif %}{% if params.disabled %} disabled="disabled" aria-disabled="true"{% endif %}{% if params.preventDoubleClick %} data-prevent-double-click="true"{% endif %}{% endset %}
+
+  {#- Actually create a button... or a link! #}
+
+  {%- if element == 'a' %}
+  <a href="{{ params.href if params.href else '#' }}" role="button" draggable="false" {{- commonAttributes | safe }}>
+    {{ params.html | safe if params.html else params.text }}
+  {# Indentation is intentional to output HTML nicely #}
+  {{- iconHtml | safe | trim | indent(2, true) if iconHtml -}}
+  </a>
+
+  {%- elseif element == 'button' %}
+  <button {%- if params.value %} value="{{ params.value }}"{% endif %}{%- if params.type %} type="{{ params.type }}"{% endif %} {{- buttonAttributes | safe }} {{- commonAttributes | safe }}>
+    {{ params.html | safe if params.html else params.text }}
+  {# Indentation is intentional to output HTML nicely #}
+  {{- iconHtml | safe | trim | indent(2, true) if iconHtml -}}
+  </button>
+
+  {%- elseif element == 'close' %}
+  <button {{- commonAttributes | safe }} onclick="closePanel()">
+    {{ params.close | safe  }}
+  </button>
+  {#
+  <button {{- commonAttributes | safe }} onclick="this.parentElement.style.display='none';">
+    {{ content | safe }}
+  </button>
+  #}
+
+  {%- elseif element == 'input' %}
+  <input value="{{ params.text }}" type="{{ params.type if params.type else 'submit' }}" {{- buttonAttributes | safe }} {{- commonAttributes | safe }}>
+  {%- endif %}
+
+
+
+
+
+  <script>
+    function closePanel() {
+
+      var nums = [];
+
+      for( var i = 0; i < 10; i++ ) {
+        nums[i] = document.getElementById("j-close").style.display = "none";
+      }
+    }
+  </script>
+{% endmacro %}

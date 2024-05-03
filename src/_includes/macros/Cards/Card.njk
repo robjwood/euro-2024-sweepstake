@@ -1,0 +1,63 @@
+{% macro card(params) %}
+  {# Set class for this component #}
+  {%- set classNames = "c-card c-card--" -%}
+
+  {# Create key called 'classes' #}
+  {%- if params.classes %}
+    {% set classNames = classNames + " c-card--" + params.classes %}
+  {% endif %}
+
+  {# Set different classes based on the layout, defaulting to 'primary if it's not set #}
+  {%- if layout == 'text-top' %}
+    {% set classNames = classNames + "text-top" %}
+
+  {%- elseif layout == 'text-left' %}
+    {% set classNames = classNames + "text-left" %}
+
+  {% else %}
+    {% set classNames = classNames + "primary" %}
+  {%- endif %}
+
+  {#- Define common attributes that we can use across all element types #}
+  {%- set commonAttributes %} class="{{ classNames }}" {% endset %}
+
+
+
+  {# Create key called 'layout' #}
+  {%- if params.layout %}
+    {% set layout = params.layout %}
+  {% endif %}
+
+
+  {#- Render the card, defaulting to 'primary' if it's not explicitly set #}
+  {%- if layout == 'img-only' %}
+  <article {{- commonAttributes | safe }}>
+    <a href="{{ params.URL }}" class="c-card__link">
+      <img src="{{ params.img }}" />
+    </a>
+  </article>
+
+  {%- elseif layout == 'text-top' %}
+  <article {{- commonAttributes | safe }}>
+    <a href="{{ params.URL }}" class="c-card__link">
+      <div class="c-card__body">
+        <h2 class="font-size:l">{{ params.title }}</h2>
+        <p class="font-size:s margin-top:s">{{ params.copy }}</p>
+      </div>
+      <img src="{{ params.img }}" />
+    </a>
+  </article>
+
+  {% else %}
+  <article {{- commonAttributes | safe }}>
+    <a href="{{ params.URL }}" class="c-card__link">
+      <img src="{{ params.img }}" />
+      <div class="c-card__body">
+        <h2 class="font-size:l">{{ params.title }}</h2>
+        <p class="font-size:s margin-top:s">{{ params.copy }}</p>
+      </div>
+    </a>
+  </article>
+  {%- endif %}
+
+{% endmacro %}

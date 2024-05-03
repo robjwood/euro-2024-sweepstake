@@ -1,0 +1,12 @@
+/* LINKS
+===========================================
+===========================================*/
+
+a {
+  color: var(--color-action);
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}

@@ -1,0 +1,25 @@
+/* THEMES
+===========================================
+
+===========================================*/
+
+:root,
+[data-selected-theme="light"] { 
+  --color-background: var(--white); 
+  --color-text: var(--black); 
+  --color-action: var(--color-primary-500); 
+  --color-separator: var(--black);
+  --color-code-background: var(--grey-300); 
+  --color-code-text: var(--black);
+  --color-nav-links: var(--grey-900); 
+}
+
+[data-selected-theme="dark"] { 
+  --color-background: var(--grey-800); 
+  --color-text: var(--grey-200); 
+  --color-action: var(--color-primary-400); 
+  --color-separator: var(--grey-200);
+  --color-code-background: var(--grey-700); 
+  --color-code-text: var(--color-text);
+  --color-nav-links: var(--grey-100)
+}

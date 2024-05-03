@@ -1,0 +1,221 @@
+// /* ALERTS
+// ===========================================
+
+// ===========================================*/
+
+
+// /* Notification panels */
+// .c-notification {
+//   line-height: var(--lh-copy);
+//   margin-bottom: var(--u-xs);
+//   border-radius: 0 3px 3px 0;
+// }
+
+//   a {
+//     color: black;
+//   }
+
+//   .c-btn {
+//     background-color: var(--black);
+//     border: none;
+//     color: var(--gray-100);
+//   }
+  
+//   .c-btn:hover,
+//   .c-btn:focus {
+//     // background-color: lighten( var(--black), 50% );
+//     // border-color: lighten( var(--black), 50% ); 
+//   }
+
+  
+  
+//   p:last-child {
+//     margin-bottom: 0;
+//   }
+
+
+// /* Alert for info */
+// .c-notification--info {
+//   background: var(--blue-100);
+//   color: var(--blue-800);
+
+//   a {
+//     // color: var(--blue-500);
+//   }
+
+//   .c-btn {
+//     background-color: var(--blue-500);
+//     border: none;
+//     color: var(--blue-100);
+
+//     &:hover,
+//     &:focus {
+//       // background-color: lighten( var(--blue-500), 25% );
+//       // border-color: lighten( var(--blue-500), 25% ); 
+//     }
+//   }
+// }
+
+
+
+// // Alert for caution
+// .c-notification--warning {
+//   background: var(--cautionLight);
+//   color: var(--caution);
+
+//   a {
+//     // color: $Warning;
+//   }
+
+//   .c-btn {
+//     // background-color: $Warning;
+//     // border: none;
+//     // color: $WarningLight;
+
+//     &:hover,
+//     &:focus {
+//       // background-color: lighten( $Warning, 25% );
+//       // border-color: lighten( $Warning, 25% ); 
+//     }
+//   }
+// }
+
+// // Alert for error
+// .c-notification--error {
+//   background: var(--negativeLight);
+//   color: var(--negative);
+
+//   a {
+//     // color: $Negative;
+//   }
+
+//   .c-btn {
+//     // background-color: $Negative;
+//     // border: none;
+//     // color: $NegativeLight;
+
+//     &:hover,
+//     &:focus {
+//       // background-color: lighten( $Negative, 25% );
+//       // border-color: lighten( $Negative, 25% ); 
+//     }
+//   }
+// }
+
+
+
+
+
+// /* ALERTS
+// ===========================================
+
+// ===========================================*/
+
+// .c-alert {
+//   background: white;
+//   color: black;
+//   line-height: var(--line-height-m);
+//   // margin-bottom: $u2;
+//   // padding: $u2;
+//   border-radius: 0 3px 3px 0;
+//   border-left-style: solid;
+//   // border-left-width: $u1;
+//   border-left-color: var(--black);
+//   box-shadow: 0 1px 3px hsla(0,0%,0%,0.20), 
+//               0 2px 2px hsla(0,0%,0%,0.15),
+//               0 4px 4px hsla(0,0%,0%,0.10), 
+//               0 8px 8px hsla(0,0%,0%,0.05),
+//               0 16px 16px hsla(0,0%,0%,0.05);
+
+//   a {
+//     color: black;
+//   }
+
+//   .c-btn {
+//     // background-color: $Black;
+//     border: none;
+//     color: var(--gray-100);
+
+//     &:hover,
+//     &:focus {
+//       // background-color: lighten( $Black, 50% );
+//       // border-color: lighten( $Black, 50% ); 
+//     }
+//   }
+
+
+//   p:last-child {
+//     margin-bottom: 0;
+//   }
+// }
+
+// // Alert for info
+// .c-alert--info {
+//   background: var(--blue-100);
+//   color: var(--blue-800);
+//   border-left-color: var(--blue-500);
+
+//   a {
+//     color: var(--blue-500);
+//   }
+
+//   .c-btn {
+//     background-color: var(--blue-500);
+//     border: none;
+//     // color: $Blue10;
+
+//     &:hover,
+//     &:focus {
+//       // background-color: lighten( $Blue50, 25% );
+//       // border-color: lighten( $Blue50, 25% ); 
+//     }
+//   }
+// }
+
+
+
+// // Alert for caution
+// .c-alert--warning {
+//   // background: $WarningLight;
+//   // color: $Warning;
+//   // border-left-color: $Warning;
+
+//   a {
+//     // color: $Warning;
+//   }
+
+//   .c-btn {
+//     // background-color: $Warning;
+//     // border: none;
+//     // color: $WarningLight;
+
+//     &:hover,
+//     &:focus {
+//       // background-color: lighten( $Warning, 25% );
+//       // border-color: lighten( $Warning, 25% ); 
+//     }
+//   }
+// }
+
+// /* Alert for error */
+// .c-alert--error {
+//   // background: $NegativeLight;
+//   // color: $Negative;
+//   // border-left-color: $Negative;
+
+//   a {
+//     // color: $Negative;
+//   }
+
+//   .c-btn {
+//     // background-color: $Negative;
+//     // border: none;
+//     // color: $NegativeLight;
+
+//     &:hover,
+//     &:focus {
+//       // background-color: lighten( $Negative, 25% );
+//       // border-color: lighten( $Negative, 25% ); 
+//     }
+//   }
+// }

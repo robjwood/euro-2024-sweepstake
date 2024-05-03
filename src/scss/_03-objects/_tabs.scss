@@ -1,0 +1,81 @@
+/*! Tabby v12.0.1 | (c) 2019 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/tabby */
+[role="tablist"] {
+  display: flex;
+  list-style:none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: $u2;
+
+  & > * {
+    flex: 1;
+  }
+
+}
+
+[role="tablist"] li {
+  border-bottom: $u1 / 3 solid $Black;
+  text-align: center;
+
+  @include mq-m {
+    margin-left: -$u1 / 3; 
+  }
+
+  &.tab-highlight {
+    background-color: $Gold50;
+    border-bottom: $u1 / 3 solid $Black;
+
+    a {
+      @include mq-m {
+        background-color: $Gold50;
+        border: $u1 / 3 solid $Black;
+        color: $Gold90;
+      }
+    }
+
+  }
+}
+
+
+[role="tab"] {
+  border: $u1 / 3 solid transparent;
+  border-top-color:#d3d3d3;
+  color: $Black;
+  display: block;
+  padding: $u1 $u1;
+  text-decoration:none;
+
+  @include mq-m {
+    border-top-color: transparent;
+    margin-bottom: -$u1 / 3;
+  }
+}
+
+
+[role="tab"][aria-selected="true"] {
+  // background-color:#d3d3d3;
+
+  @include mq-m {
+    background-color: transparent;
+    border: $u1 / 3 solid $Black;
+    border-bottom-color: #fff;
+
+    // background-color: $Blue50;
+    // border: $u1 / 3 solid $Black;
+    // border-bottom-color: $Blue50;
+    // color: $Blue10;
+  }
+}
+
+
+[role="tab"]:hover:not([aria-selected="true"]) {
+  background-color:$Gold50;
+
+  @include mq-m {
+    border-color: $Black;
+  }
+}
+
+
+[hidden] {
+  display:none;
+}

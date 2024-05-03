@@ -1,0 +1,36 @@
+/* FORMS
+===========================================
+===========================================*/
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+label {
+  display: block;
+}
+
+/* All inputs except button */
+input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="file"]),
+select,
+textarea {
+  border-width: var(--spacing-2xs);
+  border-style: solid;
+  padding: var(--spacing-s);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-left: inherit;
+}
+
+input:user-invalid {
+  border-color: red;
+}
+
+@supports not selector(:user-invalid) {
+  [data-js-enabled='false'] input:invalid {
+    /* If the users has no js enabled and their browser doesn't support :user-invald, add styles here */
+  }
+}

@@ -1,0 +1,85 @@
+/* VARIABLES
+===========================================
+
+===========================================*/
+
+:root {
+  /* Spacing
+  ----------------------------------------- */
+  --spacing-3xs: 0.1rem;  
+  --spacing-2xs: 0.18rem;  
+  --spacing-xs: 0.3rem;    
+  --spacing-s: 0.5rem;      
+  --spacing-base: 1rem;      
+  --spacing-l: 2rem;      
+  --spacing-xl: 4rem;    
+  --spacing-2xl: 8rem;  
+  --spacing-3xl: 16rem;  
+
+  /* Flow space */
+  --flow-space: 1.5em;
+
+  /* Border radius */
+  --border-radius-xs: var(--spacing-xs);
+  --border-radius-s: var(--spacing-s);
+  --border-radius: var(--spacing-base);
+
+  /* Typography
+  ----------------------------------------- */
+  --font-base: system-ui, 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  --font-accent: system-ui, 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  --measure: 68ch;
+
+  // Based on this: https://www.fluid-type-scale.com/calculate?minFontSize=16&minWidth=400&minRatio=1.2&maxFontSize=18&maxWidth=1200&maxRatio=1.333&steps=xs%2Cs%2Cbase%2Cl%2Cxl%2C2xl%2C3xl%2C4xl%2C5xl&baseStep=base&prefix=font-size&decimals=2&useRems=on&remValue=16
+  --font-size-xs: clamp(0.69rem, -0.12vw + 0.73rem, 0.63rem);
+  --font-size-s: clamp(0.83rem, 0.02vw + 0.83rem, 0.84rem);
+  --font-size-base: clamp(1rem, 0.25vw + 0.94rem, 1.13rem);
+  --font-size-l: clamp(1.2rem, 0.6vw + 1.05rem, 1.5rem);
+  --font-size-xl: clamp(1.44rem, 1.12vw + 1.16rem, 2rem);
+  --font-size-2xl: clamp(1.73rem, 1.87vw + 1.26rem, 2.66rem);
+  --font-size-3xl: clamp(2.07rem, 2.96vw + 1.33rem, 3.55rem);
+  --font-size-4xl: clamp(2.49rem, 4.49vw + 1.37rem, 4.73rem);
+  --font-size-5xl: clamp(2.99rem, 6.65vw + 1.32rem, 6.31rem);
+
+
+  --line-height-xs:     1.1;
+  --line-height-normal: 1.5;
+
+
+
+
+  /* Colours
+  ----------------------------------------- */
+  --white:              hsla(0,0%,100%,1);
+
+  --grey-100:           hsla(214,10%,96%,1);  
+  --grey-200:           hsla(214,10%,90%,1);
+  --grey-300:           hsla(214,10%,75%,1);
+  --grey-400:           hsla(214,10%,65%,1);
+  --grey-500:           hsla(214,10%,50%,1);
+  --grey-600:           hsla(214,10%,45%,1);
+  --grey-700:           hsla(214,10%,40%,1);
+  --grey-800:           hsla(214,10%,30%,1);
+  --grey-900:           hsla(214,15%,20%,1);
+
+  --black:              hsla(0,50%,10%,1);       
+
+  --positive:           hsla(120,75%,25%,1);
+  --positiveLight:      hsla(120,75%,90%,1);
+  
+  --caution:            hsla(45,75%,50%,1);
+  --cautionLight:       hsla(45,75%,90%,1);
+  --negative:           hsla(0,75%,50%,1);
+  --negativeLight:      hsla(0,75%,90%,1);  
+  --neutral:            hsla(200,40%,35%,1);
+  --neutralLight:       hsla(200,40%,90%,1);
+    
+  --color-primary-100:  hsla(240,100%,99%,1);
+  --color-primary-200:  hsla(240,100%,92%,1);
+  --color-primary-300:  hsla(240,100%,80%,1);
+  --color-primary-400:  hsla(240,100%,75%,1);
+  --color-primary-500:  hsl(240, 100%, 45%);
+  --color-primary-600:  hsla(240,100%,40%,1);
+  --color-primary-700:  hsla(240,100%,25%,1);
+  --color-primary-900:  hsla(240,50%,25%,1);
+}

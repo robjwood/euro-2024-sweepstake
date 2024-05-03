@@ -1,0 +1,8 @@
+/* WRAPPER
+===========================================
+===========================================*/
+.o-wrapper {
+  margin-inline: auto;
+  max-inline-size: var(--measure);
+  padding: var(--spacing-base);
+}

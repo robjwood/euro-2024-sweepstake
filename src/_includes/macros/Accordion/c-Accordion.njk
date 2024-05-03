@@ -1,0 +1,42 @@
+{% macro accordion(params) %}
+  <div class="o-stack o-stack--xs c-accordion">
+    {% for item in params.items %}
+    <div>
+      <h2 class="c-accordion__title {{ item.titleClass }}">
+        <img class="c-accordion__icon" src="https://www.eipublicanpartnerships.com/_layouts/15/Brightstarr.EI.Intranet/img/{{ item.icon }}" alt="">
+        <button aria-expanded="false">
+          {{ item.title }}
+          <svg viewBox="0 0 11 11" aria-hidden="true" focusable="false" class="h-6">  
+            <rect class="vert" height="9" width="1" y="1" x="5" />
+            <rect height="1" width="9" y="5" x="1" />
+          </svg> 
+        </button>
+      </h2>
+      <div hidden class="c-accordion__content o-wrapper o-wrapper--m">
+        <p>{{ item.copy}}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+{% endmacro %}
+
+
+{#
+{% macro accordion(titleClass, icon, accTitle, copy) %}
+  <div class="c-accordion">
+    <h2 class="c-accordion__title  {{ titleClass }}">
+      <img class="c-accordion__icon" src="{{ icon }}" alt="">
+      <button aria-expanded="false">
+        {{ accTitle }}
+        <svg viewBox="0 0 11 11" aria-hidden="true" focusable="false">  
+          <rect class="vert" height="9" width="1" y="1" x="5" />
+          <rect height="1" width="9" y="5" x="1" />
+        </svg> 
+      </button>
+    </h2>
+    <div hidden class="c-accordion__content o-wrapper o-wrapper--m">
+      <p>{{ copy}}</p>
+    </div>
+  </div>
+{% endmacro %}
+#}

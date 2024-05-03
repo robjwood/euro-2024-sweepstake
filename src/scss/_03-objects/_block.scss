@@ -1,0 +1,29 @@
+/* ==========================================================================
+   #BLOCK
+   ========================================================================== */
+
+/**
+ * Stacked image-with-text object. A simple abstraction to cover a very commonly
+ * occurring design pattern.
+ */
+
+.o-block {
+  display: block;
+  text-align: center;
+}
+
+  .o-block__img {
+    /* margin-bottom: $u1; */
+  }
+
+
+/* Alignment variants
+   ========================================================================== */
+
+.o-block--right {
+  text-align: right;
+}
+
+.o-block--left {
+  text-align: left;
+}

@@ -1,0 +1,40 @@
+{% macro notification(params) %}
+  
+  {# Set shared classes for this component #}
+  {%- set classNames = "o-box c-notification c-notification--" -%}
+
+  {# Set text to be prefixed to a notification depending on its purpose #}
+  {%- set textPrefix = "" -%}
+
+
+  {# Create key called purpose. The purpose here will decide what classes we add to the element #}
+  {%- if params.purpose %}
+    {% set purpose = params.purpose %}
+  {% endif %}
+
+  {# Set different attributes based on the purpose. #}
+  {%- if purpose == 'info' %}
+    {% set classNames = classNames + "info bg-blue-100 text-blue-500" %}
+    {% set textPrefix = "Info" %}
+
+  {%- elseif purpose == 'warning' %}
+    {% set classNames = classNames + "warning bg-yellow-200 text-yellow-800" %}
+    {% set textPrefix = "Warning" %}
+
+  {%- elseif purpose == 'error' %}
+    {% set classNames = classNames + "error bg-red-200 text-red-800" %}
+    {% set textPrefix = "Error" %}
+
+  {%- endif %}
+
+
+  {# Set common attributes shared across all notification types (just classes for now but could include other attributes) #}
+  {%- set commonAttributes %} class="{{ classNames }}" role="status" aria-live="polite" {% endset %}
+
+
+
+<div {{- commonAttributes | safe }}>
+  <p><strong>{{textPrefix}}:</strong> {{ params.text }}</p>
+</div>
+
+{% endmacro %}

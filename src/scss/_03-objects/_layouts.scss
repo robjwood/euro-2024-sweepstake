@@ -1,0 +1,60 @@
+﻿/* OBJECTS
+===========================================
+===========================================*/
+
+
+// These are wrapper divs used for layouts
+.o-wrapper {
+  margin: 0 auto;
+  max-width: 970px;
+}
+
+// Colour variations
+.o-wrapper--white {
+  background: $White;
+}
+
+
+
+// Size variations
+.o-wrapper--s {
+  @include mq-m {
+    padding-left: $u1;
+    padding-right: $u1;
+  }
+}
+
+.o-wrapper--m {
+  @include mq-m {
+    padding-left: $u2;
+    padding-right: $u2;
+  }
+}
+
+.o-wrapper--l {
+  @include mq-m {
+    padding-left: $u3;
+    padding-right: $u3;
+  }
+}
+
+.o-wrapper--xl {
+  @include mq-m {
+    padding-left: $u4;
+    padding-right: $u4;
+  }
+}
+
+.o-wrapper--xxl {
+  @include mq-m {
+    padding-left: $u5;
+    padding-right: $u5;
+  }
+}
+
+.o-wrapper--xxxl {
+  @include mq-m {
+    padding-left: $u6;
+    padding-right: $u6;
+  }
+}

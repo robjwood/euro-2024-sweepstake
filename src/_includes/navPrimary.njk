@@ -1,0 +1,19 @@
+{% set currentUrl %}{{ page.url }}{% endset %}
+
+<nav class="o-wrapper c-nav-primary">
+  <ul class="padding-left:0 flex" role="list">
+    <li>
+      <a {% if currentUrl === '/' %}aria-current="page"{% endif %} href="/">Home</a>
+    </li>
+    {% for item in navigation.top %}
+    <li>
+      <a
+        href="{{ item.url }}"
+        {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
+      >
+        {{ item.text }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>

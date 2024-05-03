@@ -1,0 +1,15 @@
+---
+layout: main.njk
+---
+
+{% block main %}
+
+{% if date %}
+  <time datetime="{{ date | postDate }}">{{ date | postDatePretty }}</time>
+{% endif %}
+
+<div class="flow">
+  <h1>{{ title }}</h1>
+  {{ content | safe }}
+</div>
+{% endblock %}

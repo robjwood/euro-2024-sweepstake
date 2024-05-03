@@ -1,0 +1,117 @@
+/* Buttons
+========================================================================== */
+
+  [class^="c-btn"] {
+    background-color: var(--black);
+    border: 0;
+    color: var(--white);
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+    padding-inline: var(--spacing-base);
+    padding-block: var(--spacing-s);
+    text-align: center;
+    text-decoration: none;
+  }
+
+  [class^="c-btn"]:hover {
+    background-color: var(--grey-800);
+  }
+  
+  [class^="c-btn"]:focus {
+    box-shadow: 0 0 0 4px gold;
+  }
+
+  .c-btn:active {
+    box-shadow: 0 0 0 4px gold;
+  }
+
+
+
+
+  .c-btn--primary {
+    background-color: var(--black);
+    color: var(--white); 
+  }
+
+    .c-btn--primary:active {
+    }
+
+
+
+  .c-btn--secondary {
+    color: var(--blue-800); 
+    background-color: var(white);
+  }
+
+    .c-btn--secondary:hover,
+    .c-btn--secondary:focus {
+      // background-color: lighten( var(--blue-500), 25% );
+      // border-color: lighten( var(--blue-500), 25% ); 
+    }
+
+    .c-btn--secondary:active {
+    }
+
+  .c-btn--tertiary {
+    border-color: transparent;
+    color: var(--blue-500);
+
+  }
+
+    .c-btn--tertiary:hover,
+    .c-btn--tertiary:focus {
+      text-decoration: underline; 
+    }
+
+    .c-btn--tertiary:active {
+    }
+
+
+
+  /*
+  .c-btn--other {
+    background-color: $Grey20;
+    border-color: transparent;
+    border-bottom-color: $Grey50;
+    color: $Grey90; 
+    
+    &:visited {
+      color: $Grey90;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: lighten( $Grey50, 25% );
+      border-color: lighten( $Grey50, 25% ); 
+      color: var(--white);
+    }
+
+    &:active {
+      // border-bottom-color: lighten( var(--blue-500), 5% );
+    }
+  }
+  */
+
+ 
+/* Size variants
+========================================================================== */
+
+  .c-btn--s {
+    font-size: theme('fontSize.sm');
+    padding: calc(var(--u-xs) / 1.3) var(--u-xs) calc(var(--u-xs) / 1.3);
+  }
+
+  .c-btn--m {
+    padding: var(--u-xs) var(--u-m);
+  }
+
+  .c-btn--l {
+    font-size: var(--f1);
+    padding: var(--u-m) var(--u8);
+  }
+
+  .c-btn--xl {
+    font-size: var(--f3);
+    padding: var(--u-xl) var(--u10);
+  }

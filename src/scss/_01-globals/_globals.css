@@ -1,0 +1,36 @@
+/* GLOBALS
+===========================================
+===========================================*/
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-base);
+  font-size: var(--font-size-base);
+}
+
+.flow > * + * {
+  margin-block-start: var(--flow-space, 1.5em);
+}
+
+:is(h1, h2, h3, blockquote) {
+  --flow-space: 2em;
+}
+
+:is(h1, h2, h3) + * {
+  --flow-space: 1em;
+}
+
+/*
+p {
+  max-width: var(--measure);
+}
+*/
+
+article > * {
+  max-width: 65ch;
+}
+
+blockquote {
+  max-width: 50ch;
+}

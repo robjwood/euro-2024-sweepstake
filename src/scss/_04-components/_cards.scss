@@ -1,0 +1,62 @@
+/* CARDS
+===========================================
+===========================================*/
+
+.c-card {
+  background-color: white;
+  border: var(--spacing-2xs) solid var(--black);
+
+  img {
+    display: block; // Removes whitespace at the bottom
+  }
+}
+
+.c-card__title {
+  font-size: var(--font-size-l);
+}
+
+.c-card__body {
+  padding: var(--spacing-base) var(--spacing-base);
+}
+.c-card__link,
+.c-card__link:visited {
+  color: var(--black);
+  text-decoration: none;
+}
+
+  .c-card__copy {
+    margin-top: 0;
+  }
+
+
+// Modifiers
+
+.c-card--img-only {
+img {
+  height: 100%;
+  object-fit: cover;
+}
+}
+
+.c-card--text-left {
+  grid-column-start: 2;
+  grid-column-end: 4;
+
+  .c-card__link {
+    display: flex;
+    padding: var(--u-xs);
+
+    &> * {
+      flex: 1 0 0;
+    }
+  }
+}
+
+.c-card--no-border {
+  border: 0;
+}
+
+
+.c-card--sevenths > * {
+  width: 14.28%;
+}

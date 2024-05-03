@@ -1,0 +1,11 @@
+﻿/* INPUTS
+===========================================
+Remove bullets and left margin.
+===========================================*/
+
+.o-checkbox {
+  // Horrible styles that exist only to 'undo' some poorly chosen global styles (*sigh*)
+  position: inherit !important;
+  left: inherit !important;
+  visibility: inherit !important;
+}

@@ -1,0 +1,13 @@
+{% macro colourSwatch(colourName) %}
+<div class="mb-4xl">
+  <section class="padding:xs color:{{ colourName }}-500 font-weight:bold uppercase"><strong>{{ colourName | capitalize }}</strong></section>
+  <ul class="list-none my-0 pl-0">
+    <li class="o-card__item text-center mt-0 padding:m background-color:{{ colourName }}-100 color:{{ colourName }}-500 text-sm">{{ colourName | capitalize }}-100</li>
+    <li class="o-card__item text-center mt-0 padding:m background-color:{{ colourName }}-200 color:{{ colourName }}-900 text-sm">{{ colourName | capitalize }}-200</li>
+    <li class="o-card__item text-center mt-0 padding:m background-color:{{ colourName }}-300 color:{{ colourName }}-100 text-sm">{{ colourName | capitalize }}-300</li>
+    <li class="o-card__item text-center mt-0 padding:m background-color:{{ colourName }}-500 color:{{ colourName }}-100 text-sm">{{ colourName | capitalize }}-500</li>
+    <li class="o-card__item text-center mt-0 padding:m background-color:{{ colourName }}-800 color:{{ colourName }}-100 text-sm">{{ colourName | capitalize }}-800</li>
+    <li class="o-card__item text-center mt-0 padding:m background-color:{{ colourName }}-900 color:{{ colourName }}-100 text-sm">{{ colourName | capitalize }}-900</li>
+  </ul>
+</div>
+{% endmacro %}

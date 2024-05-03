@@ -1,0 +1,18 @@
+﻿/* LIST BARE
+===========================================
+Remove bullets and left margin.
+===========================================*/
+
+.o-list-bare {
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+.o-list-bare__item {
+  line-height: 1.8;
+
+  &:before {
+    display: none; // This just makes sure that any bullet added as a pseudo element elsewhere doesn't get show.
+  }
+}

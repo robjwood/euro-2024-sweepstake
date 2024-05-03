@@ -1,0 +1,71 @@
+﻿/* TABLE
+===========================================
+Remove bullets and left margin.
+===========================================*/
+
+.o-table {
+  width: 100%;
+
+  th,
+  td {
+    padding: $u1;
+  }
+}
+
+
+/* Equal-width table cells
+   ========================================================================== */
+
+/**
+ * `table-layout: fixed` forces all cells within a table to occupy the same
+ * width as each other. This also has performance benefits: because the browser
+ * does not need to (re)calculate cell dimensions based on content it discovers,
+ * the table can be rendered very quickly. Further reading:
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout#Values
+ */
+
+.o-table--fixed {
+  table-layout: fixed;
+}
+
+
+
+
+
+/* Size variants
+   ========================================================================== */
+
+.o-table--tiny {
+
+  th,
+  td {
+    padding: $u1 / 2;
+  }
+}
+
+
+.o-table--small {
+
+  th,
+  td {
+    padding: $u1;
+  }
+}
+
+
+.o-table--large {
+
+  th,
+  td {
+    padding: var(--u2);
+  }
+}
+
+
+.o-table--huge {
+
+  th,
+  td {
+    padding: var(--u5);
+  }
+}

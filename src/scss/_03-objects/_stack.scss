@@ -1,0 +1,28 @@
+/* STACK
+===========================================
+===========================================*/
+
+.o-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+  .o-stack > * {
+    margin-top: 0;
+    margin-bottom: 0;
+  } 
+
+  .o-stack * + * {
+    margin-top: var(--flow-space);
+  }
+
+
+  /* Size variants */
+  .o-stack--s > * + * {
+    margin-top: var(--spacing-s);
+  }
+
+  .o-stack--xs > * + * {
+    margin-top: var(--spacing-xs);
+  }

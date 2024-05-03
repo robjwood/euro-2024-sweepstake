@@ -1,0 +1,61 @@
+/* CARDS
+===========================================
+===========================================*/
+
+.o-card-wrap {
+  padding-left: 0;
+
+  @include mq-ns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+
+    grid-gap: 0.5rem;
+  }
+
+}
+
+  .o-card {
+    border: $u1/2 solid black;
+    border-radius: 0.5rem;
+    background-color: white;
+    list-style-type: none;
+    margin-bottom: $u1;
+
+    @include mq-ns {
+      display: flex;
+      flex: 0 1 calc(50% - 0.25rem);
+      margin-bottom: 0;
+    }
+
+    @include mq-l {
+      display: flex;
+      flex: 0 1 calc(25% - 0.25rem);
+    }
+  }
+
+
+
+// Modifiers
+
+.o-card--no-border {
+  border: 0;
+}
+
+
+.o-card--sevenths > * {
+  width: 14.28%;
+}
+
+// .c-card--eighths {
+//   .c-card__item {
+//     width: 12.5%;
+//   }
+// }
+
+.o-card--ninths > * {
+  width: 11.11%;
+}

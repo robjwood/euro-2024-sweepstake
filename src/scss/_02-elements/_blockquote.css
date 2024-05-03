@@ -1,0 +1,18 @@
+/* BLOCKQUOTE
+===========================================
+===========================================*/
+
+blockquote {
+  background-color: var(--grey-100);
+  border-radius: var(--spacing-xs);
+  font-size: var(--font-size-base);
+  padding: var(--spacing-base) var(--spacing-l);
+}
+
+cite {
+  display: block;
+  font-size: var(--font-size-s);
+  font-style: normal;
+  margin-top: var(--spacing-s);
+  text-align: right;
+}

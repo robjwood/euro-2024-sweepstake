@@ -1,0 +1,53 @@
+/* BOX
+===========================================
+===========================================*/
+[class^='o-box'] {
+  padding: var(--spacing-base);
+  border: var(--spacing-2xs) solid;
+  --color-light: var(--white);
+  --color-dark: var(--black);
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+.o-box * {
+  color: inherit;
+}
+
+.o-box.invert {
+  color: var(--color-light);
+  background-color: var(--color-dark);
+}
+
+
+  /* Size variants */
+  .o-box--0 {
+    padding: 0;
+  }
+
+  .o-box--xs {
+    padding: var(--spacing-xs);
+  }
+
+  .o-box--s {
+    padding: var(--spacing-s);
+  }
+
+  .o-box--m {
+    padding: var(--spacing-base);
+  }
+
+  .o-box--l {
+    padding: var(--spacing-l);
+  }
+
+  .o-box--xl {
+    padding: var(--spacing-xl);
+  }
+
+
+
+  /* Border variants */
+  .o-box--borderless {
+    border-color: transparent;
+  }

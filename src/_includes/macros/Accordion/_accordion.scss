@@ -1,0 +1,71 @@
+/* ACCORDIONS
+===========================================
+
+===========================================*/
+
+
+.c-accordion  {
+  // margin-bottom: var(--u-xs);
+  
+}
+
+  .c-accordion__title {
+    color: var(--white);
+
+    font-family: avalon;
+    font-size: var(--font-size-xl);
+    font-weight: normal;
+
+    display: flex;
+    align-items: center;
+
+    padding: var(--u-s);
+  }
+
+    .c-accordion__title img {
+      height: var(--u-xl);
+      margin-right: var(--u-m);
+    }
+
+
+  .c-accordion button {
+    /* Edge seems to need the following styles */
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: inherit;
+
+    align-items: center;
+    all: inherit; /* Reset to browser defaults */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+  }
+  
+    .c-accordion button svg {
+      height: var(--u-l);
+    } 
+
+    .c-accordion  button:focus svg {  
+      outline: 2px solid;
+    }
+
+
+    [aria-expanded="true"] .vert {
+      display: none;
+    }
+
+    [aria-expanded] rect {
+      fill: currentColor;
+    }  
+
+
+    .c-accordion__content {
+      padding: var(--u-s);
+      margin-top: 0;
+    }
+
+
+

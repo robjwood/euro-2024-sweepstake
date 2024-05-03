@@ -1,0 +1,13 @@
+/* PRE
+===========================================
+===========================================*/
+
+pre {
+  background-color: var(--grey-900);
+  color: var(--grey-100);
+  border-radius: var(--spacing-s);
+  padding: var(--spacing-l);
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+

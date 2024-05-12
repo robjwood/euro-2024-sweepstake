@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@11ty/eleventy-fetch": "^4.0.1",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "netlify-plugin-cache": "^1.0.3"
   }
 }

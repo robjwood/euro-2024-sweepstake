@@ -3,6 +3,6 @@
 ===========================================*/
 .o-wrapper {
   margin-inline: auto;
-  max-inline-size: var(--measure);
+  max-inline-size: 60em;
   padding: var(--spacing-base);
 }

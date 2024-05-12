@@ -28,7 +28,7 @@ Grid blocks
   .o-css-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 5px;
+    grid-gap: var(--spacing-l);
   }
 
   .o-css-grid__item {

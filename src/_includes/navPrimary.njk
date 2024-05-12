@@ -1,4 +1,5 @@
 {% set currentUrl %}{{ page.url }}{% endset %}
+<script type="module" src="/components/theme-switcher.js"></script>
 
 <nav class="o-wrapper c-nav-primary">
   <ul class="padding-left:0 flex" role="list">
@@ -16,4 +17,10 @@
     </li>
     {% endfor %}
   </ul>
+
+  <theme-switcher>
+    <button data-theme="light" aria-pressed="true">Light</button>
+    <button data-theme="dark" aria-pressed="false">Dark</button>
+  </theme-switcher>
+
 </nav>

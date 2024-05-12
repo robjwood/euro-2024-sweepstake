@@ -1,7 +1,7 @@
 {
-  "name": "11tystarter",
+  "name": "euro2024sweepstake",
   "version": "1.0.0",
-  "description": "11tystarter",
+  "description": "Euro 2024 sweepstake",
   "main": "index.html",
   "scripts": {
     "watch:sass": "sass --no-source-map --watch src/scss:public/css",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/robjwood/rjw-11ty-starter.git"
+    "url": "git+https://github.com/robjwood/euro-2024-sweepstake.git"
   },
   "author": "Rob",
   "license": "ISC",
@@ -22,5 +22,9 @@
     "@11ty/eleventy": "^2.0.1",
     "npm-run-all": "^4.1.5",
     "sass": "^1.66.1"
+  },
+  "dependencies": {
+    "@11ty/eleventy-fetch": "^4.0.1",
+    "dotenv": "^16.4.5"
   }
 }

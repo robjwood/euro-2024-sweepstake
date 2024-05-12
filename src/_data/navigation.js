@@ -1,24 +1,26 @@
 module.exports = {
+  logo: [
+    {
+      text: 'Rob Wood',
+      url: '/'
+    },
+  ],
   top: [
     {
-      text: 'Elements',
-      url: '/elements/',
+      text: 'Fixtures',
+      url: '/fixtures/'
     },
     {
-      text: 'Components',
-      url: '/components/'
+      text: 'Standings',
+      url: '/standings/'
     },
     {
-      text: 'Section',
-      url: '/section/'
+      text: 'Results',
+      url: '/results/'
     },
-    // {
-    //   text: 'Form',
-    //   url: '/form/'
-    // },
     {
-      text: 'Blog',
-      url: '/blog/'
+      text: 'Top scorers',
+      url: '/top-scorers/'
     },
   ]
 };

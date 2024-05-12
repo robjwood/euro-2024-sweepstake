@@ -15,14 +15,12 @@ h6 {
 
 h1 {
   font-size: var(--font-size-2xl);
-  letter-spacing: -0.04em;
   font-weight: 700;
 }
 
 h2 {
   font-size: var(--font-size-xl);
   font-weight: 700;
-  letter-spacing: -0.008em;
 }
 
 h3 {

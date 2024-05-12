@@ -2,6 +2,8 @@
 ===========================================
 ===========================================*/
 .c-nav-primary {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: var(--spacing-l);
 }
 

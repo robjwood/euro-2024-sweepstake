@@ -4,3 +4,7 @@ node_modules
 # build artefacts
 /public
 
+# secrets and errors
+.env
+.log
+.cache

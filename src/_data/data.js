@@ -16,13 +16,7 @@ module.exports = async function() {
   /* Get the teams
   ==========================================================================*/
   let getTeams = await EleventyFetch (`${rootPath}/teams`, {
-    duration: "1d",
-    type: "json",
-    fetchOptions: {
-      headers: {
-        'X-Auth-Token': token
-      }
-    }
+    apiOptions
   });
 
   let teams = getTeams.teams.map(team => {
@@ -82,13 +76,7 @@ module.exports = async function() {
   /* Get the fixtures
   ==========================================================================*/
   let getFixtures = await EleventyFetch (`${rootPath}/matches`, {
-    duration: "2m",
-    type: 'json',
-    fetchOptions: {
-      headers: {
-        'X-Auth-Token': "b3d10e530b9e456fa9714336f0e39b64"
-      }
-    }
+    apiOptions
   });
 
   // Group fixtures by date and create an array of objects

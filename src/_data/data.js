@@ -16,7 +16,13 @@ module.exports = async function() {
   /* Get the teams
   ==========================================================================*/
   let getTeams = await EleventyFetch (`${rootPath}/teams`, {
-    apiOptions
+    duration: "1d",
+    type: "json",
+    fetchOptions: {
+      headers: {
+        'X-Auth-Token': `${process.env.API_KEY}`
+      }
+    }
   });
 
   let teams = getTeams.teams.map(team => {
@@ -76,7 +82,13 @@ module.exports = async function() {
   /* Get the fixtures
   ==========================================================================*/
   let getFixtures = await EleventyFetch (`${rootPath}/matches`, {
-    apiOptions
+    duration: "1d",
+    type: "json",
+    fetchOptions: {
+      headers: {
+        'X-Auth-Token': `${process.env.API_KEY}`
+      }
+    }
   });
 
   // Group fixtures by date and create an array of objects
@@ -97,14 +109,17 @@ module.exports = async function() {
     return acc;
   }, {});
 
-  console.log(fixtures);
-
-
 
   /* Get the standings
   ==========================================================================*/
   let getStandings = await EleventyFetch (`${rootPath}/standings`, {
-    apiOptions
+    duration: "1d",
+    type: "json",
+    fetchOptions: {
+      headers: {
+        'X-Auth-Token': `${process.env.API_KEY}`
+      }
+    }
   });
 
   // Group the standing by groups
@@ -135,13 +150,17 @@ module.exports = async function() {
   /* Get the top scorers
   ==========================================================================*/
   let getTopScorers = await EleventyFetch (`${rootPath}/scorers`, {
-    apiOptions
+    duration: "1d",
+    type: "json",
+    fetchOptions: {
+      headers: {
+        'X-Auth-Token': `${process.env.API_KEY}`
+      }
+    }
   });
 
 
   let topScorers = getTopScorers;
-  // console.log(getTopScorers);
-
 
 
   return {

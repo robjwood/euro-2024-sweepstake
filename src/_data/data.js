@@ -17,13 +17,7 @@ module.exports = async function() {
   /* Get the teams
   ==========================================================================*/
   let getTeams = await EleventyFetch (`${rootPath}/teams`, {
-    duration: "1d",
-    type: "json",
-    fetchOptions: {
-      headers: {
-        'X-Auth-Token': token
-      }
-    }
+    apiOptions
   });
 
   let teams = getTeams.teams.map(team => {

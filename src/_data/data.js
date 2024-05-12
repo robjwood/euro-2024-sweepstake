@@ -1,13 +1,12 @@
 const EleventyFetch = require("@11ty/eleventy-fetch");
 
 const rootPath = "https://api.football-data.org/v4/competitions/EC";
-const token = `${process.env.API_KEY}`;
 const apiOptions = {
   duration: "1d",
   type: "json",
   fetchOptions: {
     headers: {
-      'X-Auth-Token': token
+      'X-Auth-Token': `${process.env.API_KEY}`
     }
   }
 };

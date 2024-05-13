@@ -8,14 +8,16 @@ h3,
 h4,
 h5,
 h6 {
+  background-color: var(--white);
+  border-radius: var(--spacing-s);
   font-family: var(--font-accent);
   line-height: var(--line-height-xs);
-  text-wrap: balance;
+  padding: var(--spacing-base);
 }
 
 h1 {
   font-size: var(--font-size-2xl);
-  font-weight: 700;
+  font-weight: 800;
 }
 
 h2 {

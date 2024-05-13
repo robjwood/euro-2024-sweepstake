@@ -6,12 +6,12 @@ layout: page.njk
 
 <div class="o-css-grid">
   {% for item in data.allocatedTeams %}
-  <div class="family">
+  <div class="family-teams flow">
     <h2>{{ item.familyMember }}</h2>
     {% for team in item.teams %}
-      <div class="team">
-        <p>{{ team.name }}</p>
+      <div class="family-teams__team">
         <img src="{{ team.crest }}" alt="Flag of {{ team.name }}" width="32" />
+        <p>{{ team.name }}</p>
       </div>
     {% endfor %}
   </div>

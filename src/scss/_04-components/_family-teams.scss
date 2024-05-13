@@ -1,0 +1,18 @@
+/* Buttons
+========================================================================== */
+
+  .family-teams {
+    background-color: var(--white);
+    border-radius: var(--spacing-s);
+    line-height: 1;
+    padding: var(--spacing-base);
+    border: 2px solid var(--black);
+
+    &__team {
+      display: flex;
+      gap: var(--spacing-base);
+    }
+  }
+
+
+

@@ -1,0 +1,31 @@
+---
+title: Standings
+---
+
+<div class="o-css-grid">
+  {% for item in data.standings %}
+  <section>
+    <h2>{{ item.group }}</h2>
+    <table class="group-table">
+      <thead>
+        <tr>
+          <th>Team</th>
+          <th>Pld</th>
+          <th>GD</th>
+          <th>Pts</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for team in item.table %}
+        <tr class="standings__team" >
+          <td><img src="{{ team.crest }}" width="20" /> {{ team.team }} <span>{{ team.familyMember }}</span></td>
+          <td>{{ team.playedGames }}</td>
+          <td>{{ team.goalDifference }}</td>
+          <td>{{ team.points }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+  {% endfor %}
+</div>

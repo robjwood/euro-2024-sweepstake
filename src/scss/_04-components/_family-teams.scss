@@ -3,10 +3,10 @@
 
   .family-teams {
     background-color: var(--white);
-    border-radius: var(--spacing-s);
+    box-shadow: 4px 4px 0 0 rgba(0,0,0,.15);
+    border-radius: var(--spacing-xs);
     line-height: 1;
     padding: var(--spacing-base);
-    border: 2px solid var(--black);
 
     &__team {
       display: flex;

@@ -8,16 +8,26 @@ h3,
 h4,
 h5,
 h6 {
-  background-color: var(--white);
-  border-radius: var(--spacing-s);
+  /* background-color: var(--white); */
+  /* border-radius: var(--spacing-s); */
   font-family: var(--font-accent);
   line-height: var(--line-height-xs);
-  padding: var(--spacing-base);
+  /* padding: var(--spacing-base); */
 }
 
 h1 {
   font-size: var(--font-size-2xl);
-  font-weight: 800;
+  font-weight: 900;
+  font-variation-settings: "slnt" -10;
+  text-shadow:
+    -8px -8px 4px white,
+    0 -8px 4px white,
+    8px -8px 4px white,
+    -8px 8px 4px white,
+    0 8px 4px white,
+    8px -8px 4px white;
+
+  text-shadow: 6px 6px 0px white, 6px -6px 0px white, -6px 6px 0px white, -6px -6px 0px white, 1px 0px 0px white, 0px 6px 0px white, -6px 0px 0px white, 0px -6px 0px white;
 }
 
 h2 {

@@ -1,16 +1,6 @@
 const EleventyFetch = require("@11ty/eleventy-fetch");
 
 const rootPath = "https://api.football-data.org/v4/competitions/EC";
-const apiOptions = {
-  duration: "1d",
-  type: "json",
-  fetchOptions: {
-    headers: {
-      'X-Auth-Token': `${process.env.API_KEY}`
-    }
-  }
-};
-  
 
 module.exports = async function() {
   /* Get the teams
@@ -28,9 +18,14 @@ module.exports = async function() {
   let teams = getTeams.teams.map(team => {
     return {
       name: team.name,
-      crest: team.crest
+      // Set the crest path to local images
+      crest: `/images/crests/${team.name.replace(/ /g, '-').toLowerCase()}.png`
+      // replace space with hyphen and convert to lowercase
+      // crest: `/images/crests/${team.name.replace(/ /g, '-').toLowerCase()}.png`
     }
   });
+
+  console.log(teams);
 
   // Clone teams array and add a new property called 'family_member'
   let addFamilyMember = teams.map(team => {
@@ -78,6 +73,20 @@ module.exports = async function() {
   });
 
 
+  let crests = getTeams.teams.map(team => {
+    return {
+      crest: team.crest,
+      name: team.name.toLowerCase()
+    }
+  });
+
+
+  // Replace Albanie crest from API with local crests
+  // const crests = {
+  //   "https://crests.football-data.org/1.svg": "/images/flags/albania.png",
+  //   "https://crests.football-data.org/2.svg": "/images/flags/austria.png",
+  // }
+  
   
   /* Get the fixtures
   ==========================================================================*/

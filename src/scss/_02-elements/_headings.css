@@ -27,7 +27,15 @@ h1 {
     0 8px 4px white,
     8px -8px 4px white;
 
-  text-shadow: 6px 6px 0px white, 6px -6px 0px white, -6px 6px 0px white, -6px -6px 0px white, 1px 0px 0px white, 0px 6px 0px white, -6px 0px 0px white, 0px -6px 0px white;
+  text-shadow:
+    6px 6px 6px white,
+    6px -6px 6px white,
+    -6px 6px 6px white,
+    -6px -6px 6px white,
+    1px 0px 6px white,
+    0px 6px 6px white,
+    -6px 0px 6px white,
+    0px -6px 6px white;
 }
 
 h2 {

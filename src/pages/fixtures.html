@@ -1,0 +1,37 @@
+---
+title: Fixtures
+---
+
+{% for item in data.fixtures %}
+  <section class="flow">
+
+    <h2>{{ item[0] }}</h2>
+
+    {% for match in item[1] %}
+      <div class="fixture flow">
+        <span class="fixture__stage">{{ match.group }}</span>
+        <div class="fixture__details">
+          <div class="fixture__home">
+            <span>{{ match.homeTeam }}</span>
+            {% if match.homeTeamCrest %}
+              <img src="{{ match.homeTeamCrest }}" alt="{{ match.homeTeam }} flag" width="32" height="18" />
+            {% endif %}
+            <span class="fixture__score">{{ match.scoreHomeTeam }}</span>
+          </div>
+
+          <span class="fixture__time">{{ match.time }}</span>
+          
+          <div class="fixture__away">
+            <span class="fixture__score">{{ match.scoreAwayTeam }}</span>
+            <!-- Hide image if match.awayTeamCrest is null -->
+            {% if match.awayTeamCrest %}
+              <img src="{{ match.awayTeamCrest }}" alt="{{ match.awayTeam }} flag" width="32" height="18" />
+            {% endif %}
+            <span>{{ match.awayTeam }}</span>
+          </div>  
+        </div>
+      </div>
+    {% endfor %}
+  
+  </section>
+{% endfor %}

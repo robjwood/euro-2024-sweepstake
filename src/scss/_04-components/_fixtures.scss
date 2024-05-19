@@ -1,0 +1,43 @@
+/* Buttons
+========================================================================== */
+
+  .fixture {
+    background-color: var(--white);
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.6);
+    border-radius: var(--spacing-3xs);
+    line-height: 1;
+    padding: var(--spacing-base);
+    text-align: center;
+
+    &__details {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr auto 1fr;
+      gap: var(--spacing-xs);
+    }
+
+    &__stage {
+      font-size: var(--font-size-s);
+      color: var(--grey-500);
+    }
+
+    &__home,
+    &__away {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-2xs);
+    }
+
+    &__home {
+      justify-content: flex-end;
+    }
+
+    &__score {
+      font-size: var(--font-size-xl);
+      font-weight: bold;
+    }
+  }
+
+
+

@@ -16,7 +16,7 @@ h6 {
 }
 
 h1 {
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-3xl);
   font-weight: 900;
   font-variation-settings: "slnt" -10;
   text-shadow:
@@ -39,18 +39,14 @@ h1 {
 }
 
 h2 {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-l);
   font-weight: 700;
 }
 
 h3 {
-  font-size: var(--font-size-l);
+  font-size: var(--font-size-base);
 }
 
 h4 {
-  font-size: var(--font-size-m);
-}
-
-h5 {
   font-size: var(--font-size-s);
 }

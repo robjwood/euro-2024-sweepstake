@@ -18,14 +18,9 @@ module.exports = async function() {
   let teams = getTeams.teams.map(team => {
     return {
       name: team.name,
-      // Set the crest path to local images
       crest: `/images/crests/${team.name.replace(/ /g, '-').toLowerCase()}.png`
-      // replace space with hyphen and convert to lowercase
-      // crest: `/images/crests/${team.name.replace(/ /g, '-').toLowerCase()}.png`
     }
   });
-
-  console.log(teams);
 
   // Clone teams array and add a new property called 'family_member'
   let addFamilyMember = teams.map(team => {
@@ -73,20 +68,6 @@ module.exports = async function() {
   });
 
 
-  let crests = getTeams.teams.map(team => {
-    return {
-      crest: team.crest,
-      name: team.name.toLowerCase()
-    }
-  });
-
-
-  // Replace Albanie crest from API with local crests
-  // const crests = {
-  //   "https://crests.football-data.org/1.svg": "/images/flags/albania.png",
-  //   "https://crests.football-data.org/2.svg": "/images/flags/austria.png",
-  // }
-  
   
   /* Get the fixtures
   ==========================================================================*/
@@ -100,23 +81,87 @@ module.exports = async function() {
     }
   });
 
-  // Group fixtures by date and create an array of objects
+  // Group fixtures by date 
   let fixtures = getFixtures.matches.reduce((acc, match) => {
-    if (!acc[match.utcDate.slice(0, 10)]) {
-      acc[match.utcDate.slice(0, 10)] = [];
-    }
-    acc[match.utcDate.slice(0, 10)].push({
-      group: match.group ? match.group.replace(/_/g, ' ').replace('GROUP', 'Group') : '',
-      homeTeam: match.homeTeam.name,
-      awayTeam: match.awayTeam.name,
-      homeCrest: match.homeTeam.crest,
-      awayCrest: match.awayTeam.crest,
-      date: match.utcDate.slice(0, 10),
-      time: match.utcDate.slice(11, 16),
-      status: match.status
+    const time = new Date(match.utcDate).toLocaleTimeString('en-GB', {
+      hour: '2-digit',
+      minute: '2-digit'
     });
+    const group = match.stage === 'GROUP_STAGE' ? match.group.replace(/_/g, ' ').toLowerCase().replace(/\b\w/g, l => l.toUpperCase()) : match.stage.replace(/_/g, ' ').toLowerCase().replace(/\b\w/g, l => l.toUpperCase());
+    
+    const homeTeam = match.homeTeam.name === null ? 'TBC' : match.homeTeam.name;
+    const awayTeam = match.awayTeam.name === null ? 'TBC' : match.awayTeam.name;
+    
+    const homeTeamScore = match.score.fullTime.homeTeam;
+    const awayTeamScore = match.score.fullTime.awayTeam;
+
+    const homeTeamCrest = match.homeTeam.crest;
+    const awayTeamCrest = match.awayTeam.crest;
+
+    function teamScore(team) {
+      return match.score.fullTime[team] !== undefined ? `${match.score.fullTime[team]}` : '';
+    }
+    
+    function dateString(date) {
+      return new Date(date).toLocaleDateString('en-GB', {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric'
+      });
+    }
+
+    if (!acc[dateString(match.utcDate)]) {
+      acc[dateString(match.utcDate)] = [];
+    }
+
+    acc[dateString(match.utcDate)].push({
+      date: dateString(match.utcDate),
+      group,
+      homeTeam,
+      awayTeam,
+      homeTeamCrest,
+      awayTeamCrest,
+      time,
+      scoreHomeTeam: teamScore(homeTeamScore),
+      scoreAwayTeam: teamScore(awayTeamScore)
+    });
+
     return acc;
   }, {});
+
+
+  // let fixtures = getFixtures.matches.map(match => {
+  //   const time = new Date(match.utcDate).toLocaleTimeString('en-GB', {
+  //     hour: '2-digit',
+  //     minute: '2-digit'
+  //   });
+    
+  //   function dateString(date) {
+  //     return new Date(date).toLocaleDateString('en-GB', {
+  //       day: 'numeric',
+  //       month: 'short',
+  //       year: 'numeric'
+  //     });
+  //   }
+
+  //   return {
+  //     date: dateString(match.utcDate),
+  //     // Get a grouped array of matches by dateString
+  //     matches: getFixtures.matches.filter(fixture => dateString(fixture.utcDate) === dateString(match.utcDate)).map(fixture => {
+  //       return {
+  //         homeTeam: fixture.homeTeam.name,
+  //         awayTeam: fixture.awayTeam.name,
+  //         homeTeamCrest: fixture.homeTeam.crest,
+  //         awayTeamCrest: fixture.awayTeam.crest,
+  //         time: time,
+  //         score: fixture.score.fullTime.homeTeam === null ? 'TBC' : `${fixture.score.fullTime.homeTeam} - ${fixture.score.fullTime.awayTeam}`
+  //       }
+  //     })
+  //   }
+  // });
+
+  console.log(fixtures);
+
 
 
   /* Get the standings

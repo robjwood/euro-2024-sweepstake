@@ -3,14 +3,15 @@
 
   .family-teams {
     background-color: var(--white);
-    box-shadow: 4px 4px 0 0 rgba(0,0,0,.15);
-    border-radius: var(--spacing-xs);
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.6);
+    border-radius: var(--spacing-3xs);
     line-height: 1;
     padding: var(--spacing-base);
 
     &__team {
       display: flex;
-      gap: var(--spacing-base);
+      gap: var(--spacing-2xs);
     }
   }
 

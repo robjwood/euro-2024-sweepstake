@@ -3,7 +3,6 @@
 ===========================================*/
 .c-nav-primary__bg {
   background-color: var(--black);
-  padding: var(--spacing-base);
   margin-bottom: var(--spacing-l);
 }
 
@@ -14,6 +13,7 @@
 
     .c-nav-primary ul {
       display: flex;
+      align-items: center;
       flex-wrap: wrap;
       gap: var(--spacing-base);
       list-style-type: none;

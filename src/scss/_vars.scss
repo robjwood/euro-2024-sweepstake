@@ -6,15 +6,15 @@
 :root {
   /* Spacing
   ----------------------------------------- */
-  --spacing-3xs: 0.1rem;  
-  --spacing-2xs: 0.18rem;  
-  --spacing-xs: 0.3rem;    
-  --spacing-s: 0.5rem;      
-  --spacing-base: 1rem;      
-  --spacing-l: 2rem;      
-  --spacing-xl: 4rem;    
-  --spacing-2xl: 8rem;  
-  --spacing-3xl: 16rem;  
+  --spacing-3xs: clamp(0.25rem, 0.2283rem + 0.1087vi, 0.3125rem);
+  --spacing-2xs: clamp(0.5rem, 0.4565rem + 0.2174vi, 0.625rem);
+  --spacing-xs: clamp(0.75rem, 0.6848rem + 0.3261vi, 0.9375rem);
+  --spacing-s: clamp(1rem, 0.913rem + 0.4348vi, 1.25rem);
+  --spacing-base: clamp(1.5rem, 1.3696rem + 0.6522vi, 1.875rem);
+  --spacing-l: clamp(2rem, 1.8261rem + 0.8696vi, 2.5rem);
+  --spacing-xl: clamp(3rem, 2.7391rem + 1.3043vi, 3.75rem);
+  --spacing-2xl: clamp(4rem, 3.6522rem + 1.7391vi, 5rem);
+  --spacing-3xl: clamp(6rem, 5.4783rem + 2.6087vi, 7.5rem);
 
   /* Flow space */
   --flow-space: 1.5em;
@@ -30,16 +30,16 @@
   --font-accent: "Inter", 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   --measure: 68ch;
 
-  // Based on this: https://www.fluid-type-scale.com/calculate?minFontSize=16&minWidth=400&minRatio=1.125&maxFontSize=18&maxWidth=1200&maxRatio=1.2&steps=xs%2Cs%2Cbase%2Cl%2Cxl%2C2xl%2C3xl%2C4xl%2C5xl&baseStep=base&prefix=font-size&decimals=2&useRems=on&remValue=16&previewFont=Inter&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground&previewWidth=1200
-  --font-size-xs: clamp(0.79rem, -0.02vi + 0.79rem, 0.78rem);
-  --font-size-s: clamp(0.89rem, 0.1vi + 0.86rem, 0.94rem);
+  // Based on this: https://www.fluid-type-scale.com/calculate?minFontSize=16&minWidth=400&minRatio=1.2&maxFontSize=18&maxWidth=1200&maxRatio=1.2&steps=xs%2Cs%2Cbase%2Cl%2Cxl%2C2xl%2C3xl%2C4xl%2C5xl&baseStep=base&prefix=font-size&decimals=2&useRems=on&remValue=16&previewFont=Inter&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground
+  --font-size-xs: clamp(0.69rem, 0.17vi + 0.65rem, 0.78rem);
+  --font-size-s: clamp(0.83rem, 0.21vi + 0.78rem, 0.94rem);
   --font-size-base: clamp(1rem, 0.25vi + 0.94rem, 1.13rem);
-  --font-size-l: clamp(1.13rem, 0.45vi + 1.01rem, 1.35rem);
-  --font-size-xl: clamp(1.27rem, 0.71vi + 1.09rem, 1.62rem);
-  --font-size-2xl: clamp(1.42rem, 1.04vi + 1.16rem, 1.94rem);
-  --font-size-3xl: clamp(1.6rem, 1.46vi + 1.24rem, 2.33rem);
-  --font-size-4xl: clamp(1.8rem, 1.99vi + 1.3rem, 2.8rem);
-  --font-size-5xl: clamp(2.03rem, 2.66vi + 1.36rem, 3.36rem);
+  --font-size-l: clamp(1.2rem, 0.3vi + 1.13rem, 1.35rem);
+  --font-size-xl: clamp(1.44rem, 0.36vi + 1.35rem, 1.62rem);
+  --font-size-2xl: clamp(1.73rem, 0.43vi + 1.62rem, 1.94rem);
+  --font-size-3xl: clamp(2.07rem, 0.52vi + 1.94rem, 2.33rem);
+  --font-size-4xl: clamp(2.49rem, 0.62vi + 2.33rem, 2.8rem);
+  --font-size-5xl: clamp(2.99rem, 0.75vi + 2.8rem, 3.36rem);
 
   --line-height-xs:     1.1;
   --line-height-normal: 1.5;

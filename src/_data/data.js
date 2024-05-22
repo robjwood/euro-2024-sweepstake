@@ -1,8 +1,57 @@
 const EleventyFetch = require("@11ty/eleventy-fetch");
-
 const rootPath = "https://api.football-data.org/v4/competitions/EC";
+// Create a variable to store the API key
+const key = process.env.API_KEY;
+// const headers = { "X-Auth-Token": key };
 
 module.exports = async function() {
+  // return fetch(rootPath, { headers })
+  //   .then(async (response) => {
+  //     // If the response is successful, get the JSON
+  //     if (response.ok) {
+  //       return response.json();
+  //     }
+  //     // Otherwise, throw an error
+  //     const json = await response.json();
+  //     throw json;
+  //   })
+  //   .then((data) => {
+  //     // The returned data
+  //     return {
+  //       startDate: data.currentSeason.startDate
+  //     };
+  //   })
+  //   .catch((error) => {
+  //     // There was an error
+  //     console.error('******SOMETHING BAD HAS HAPPENED!******', error);
+  //   });
+
+
+  /* Get the teams
+  ==========================================================================*/
+  let getStartDate = await EleventyFetch (`${rootPath}`, {
+    duration: "1d",
+    type: "json",
+    fetchOptions: {
+      headers: {
+        'X-Auth-Token': key
+      }
+    }
+  });
+
+  // Calculate the numbers of days until the tournament starts from the current date
+  let startDate = new Date(getStartDate.currentSeason.startDate);
+  let currentDate = new Date();
+  let daysUntilTournament = Math.floor((startDate - currentDate) / (1000 * 60 * 60 * 24));
+
+  
+
+
+  // let startDate = getStartDate.currentSeason.startDate;
+
+  console.log(daysUntilTournament);
+
+
   /* Get the teams
   ==========================================================================*/
   let getTeams = await EleventyFetch (`${rootPath}/teams`, {
@@ -45,7 +94,58 @@ module.exports = async function() {
     }
   });
 
-  // Group teams by family member 
+
+  function assignFamilyMember(teamName) {
+    const familyMemberEntry = addFamilyMember.find(familyMember => familyMember.name === teamName);
+    return familyMemberEntry ? familyMemberEntry.family_member : 'Unknown';
+  }
+
+  // Create a function that takes the team name and returns the family member
+  // function assignFamilyMember(team) {
+  //   let familyMember = addFamilyMember.find(familyMember => familyMember.name === team).family_member;
+  //   return familyMember;
+  // }
+
+  console.log(assignFamilyMember('Switzerland'));
+
+
+
+  // // Create a function to assign the family member to each team by name
+  // function assignFamilyMember(team) {
+  //   // Clone teams array and add a new property called 'family_member' and make this a function with the team name as the argument
+  //   let addFamilyMember = teams.map(team => {
+  //     return {
+  //       ...team,
+  //       family_member: 
+  //         team.name === 'Switzerland' || team.name === 'Scotland' ? 'Rob' :
+  //         team.name === 'Hungary' || team.name === 'Italy' ? 'Anna' :
+  //         team.name === 'Albania' || team.name === 'Slovenia' ? 'Grandad' :
+  //         team.name === 'Croatia' || team.name === 'Austria' ? 'Erin' :
+  //         team.name === 'Serbia' || team.name === 'Slovakia' ? 'Clare' :
+  //         team.name === 'France' || team.name === 'England' ? 'Ben' :
+  //         team.name === 'Romania' || team.name === 'Ukraine' ? 'Evie' :
+  //         team.name === 'Turkey' || team.name === 'Georgia' ? 'Harry' :
+  //         team.name === 'Germany' || team.name === 'Netherlands' ? 'Oscar' :
+  //         team.name === 'Czech Republic' ? 'Lola' :
+  //         team.name === 'Portugal' || team.name === 'Denmark' ? 'Freddie' :
+  //         team.name === 'Belgium' ? 'Jack' :
+  //         team.name === 'Poland' ? 'Steve' :
+  //         team.name === 'Spain' ? 'Meg' :
+  //         ''
+  //     }
+  //   });
+
+  //   // Find the team in the addFamilyMember array and return the family member
+  //   let familyMember = addFamilyMember.find(familyMember => familyMember.name === team).family_member;
+  //   return familyMember;
+  // }
+
+
+
+
+
+
+    // Group teams by family member 
   let groupByFamilyMember = addFamilyMember.reduce((acc, team) => {
     if (!acc[team.family_member]) {
       acc[team.family_member] = [];
@@ -88,6 +188,9 @@ module.exports = async function() {
       minute: '2-digit'
     });
     const group = match.stage === 'GROUP_STAGE' ? match.group.replace(/_/g, ' ').toLowerCase().replace(/\b\w/g, l => l.toUpperCase()) : match.stage.replace(/_/g, ' ').toLowerCase().replace(/\b\w/g, l => l.toUpperCase());
+
+    // Assign a fmaily member to each team
+
     
     const homeTeam = match.homeTeam.name === null ? 'TBC' : match.homeTeam.name;
     const awayTeam = match.awayTeam.name === null ? 'TBC' : match.awayTeam.name;
@@ -123,44 +226,17 @@ module.exports = async function() {
       awayTeamCrest,
       time,
       scoreHomeTeam: teamScore(homeTeamScore),
-      scoreAwayTeam: teamScore(awayTeamScore)
+      scoreAwayTeam: teamScore(awayTeamScore),
+      // Use the assignFamilyMember function to assign a family member to each team
+      // familyMember: assignFamilyMember(homeTeam),
+      familyMemberHome: assignFamilyMember(match.homeTeam.name),
+      familyMemberAway: assignFamilyMember(match.awayTeam.name)
     });
 
     return acc;
   }, {});
 
 
-  // let fixtures = getFixtures.matches.map(match => {
-  //   const time = new Date(match.utcDate).toLocaleTimeString('en-GB', {
-  //     hour: '2-digit',
-  //     minute: '2-digit'
-  //   });
-    
-  //   function dateString(date) {
-  //     return new Date(date).toLocaleDateString('en-GB', {
-  //       day: 'numeric',
-  //       month: 'short',
-  //       year: 'numeric'
-  //     });
-  //   }
-
-  //   return {
-  //     date: dateString(match.utcDate),
-  //     // Get a grouped array of matches by dateString
-  //     matches: getFixtures.matches.filter(fixture => dateString(fixture.utcDate) === dateString(match.utcDate)).map(fixture => {
-  //       return {
-  //         homeTeam: fixture.homeTeam.name,
-  //         awayTeam: fixture.awayTeam.name,
-  //         homeTeamCrest: fixture.homeTeam.crest,
-  //         awayTeamCrest: fixture.awayTeam.crest,
-  //         time: time,
-  //         score: fixture.score.fullTime.homeTeam === null ? 'TBC' : `${fixture.score.fullTime.homeTeam} - ${fixture.score.fullTime.awayTeam}`
-  //       }
-  //     })
-  //   }
-  // });
-
-  console.log(fixtures);
 
 
 
@@ -216,11 +292,11 @@ module.exports = async function() {
 
   let topScorers = getTopScorers;
 
-
   return {
     allocatedTeams,
     fixtures,
     standings,
-    topScorers
+    topScorers,
+    daysUntilTournament
   };
 };

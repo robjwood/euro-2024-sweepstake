@@ -6,15 +6,27 @@
 :root {
   /* Spacing
   ----------------------------------------- */
-  --spacing-3xs: clamp(0.25rem, 0.2283rem + 0.1087vi, 0.3125rem);
-  --spacing-2xs: clamp(0.5rem, 0.4565rem + 0.2174vi, 0.625rem);
-  --spacing-xs: clamp(0.75rem, 0.6848rem + 0.3261vi, 0.9375rem);
-  --spacing-s: clamp(1rem, 0.913rem + 0.4348vi, 1.25rem);
-  --spacing-base: clamp(1.5rem, 1.3696rem + 0.6522vi, 1.875rem);
-  --spacing-l: clamp(2rem, 1.8261rem + 0.8696vi, 2.5rem);
-  --spacing-xl: clamp(3rem, 2.7391rem + 1.3043vi, 3.75rem);
-  --spacing-2xl: clamp(4rem, 3.6522rem + 1.7391vi, 5rem);
-  --spacing-3xl: clamp(6rem, 5.4783rem + 2.6087vi, 7.5rem);
+  --spacing-3xs: 0.1rem;  
+  --spacing-2xs: 0.18rem;  
+  --spacing-xs: 0.3rem;    
+  --spacing-s: 0.5rem;      
+  --spacing-base: 1rem;      
+  --spacing-l: 1.5rem;      
+  --spacing-xl: 2rem;    
+  --spacing-2xl: 3rem;  
+  --spacing-3xl: 4rem;  
+
+
+
+  // --spacing-3xs:  clamp(0.25rem, 0.2283rem + 0.1087vi, 0.3125rem);
+  // --spacing-2xs:  clamp(0.5rem, 0.4565rem + 0.2174vi, 0.625rem);
+  // --spacing-xs:   clamp(0.75rem, 0.6848rem + 0.3261vi, 0.9375rem);
+  // --spacing-s:    clamp(1rem, 0.913rem + 0.4348vi, 1.25rem);
+  // --spacing-base: clamp(1.5rem, 1.3696rem + 0.6522vi, 1.875rem);
+  // --spacing-l:    clamp(2rem, 1.8261rem + 0.8696vi, 2.5rem);
+  // --spacing-xl:   clamp(3rem, 2.7391rem + 1.3043vi, 3.75rem);
+  // --spacing-2xl:  clamp(4rem, 3.6522rem + 1.7391vi, 5rem);
+  // --spacing-3xl:  clamp(6rem, 5.4783rem + 2.6087vi, 7.5rem);
 
   /* Flow space */
   --flow-space: 1.5em;

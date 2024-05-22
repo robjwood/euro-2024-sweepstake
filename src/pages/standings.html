@@ -2,9 +2,9 @@
 title: Standings
 ---
 
-<div class="o-css-grid">
+<div class="flow">
   {% for item in data.standings %}
-  <section>
+  <section class="standings flow">
     <h2>{{ item.group }}</h2>
     <table class="group-table">
       <thead>
@@ -18,7 +18,7 @@ title: Standings
       <tbody>
         {% for team in item.table %}
         <tr class="standings__team" >
-          <td><img src="{{ team.crest }}" width="20" /> {{ team.team }} <span>{{ team.familyMember }}</span></td>
+          <th scope="row"><img src="{{ team.crest }}" width="20" /> {{ team.team }} <span class="family-member">{{ team.familyMember }}</span></th>
           <td>{{ team.playedGames }}</td>
           <td>{{ team.goalDifference }}</td>
           <td>{{ team.points }}</td>

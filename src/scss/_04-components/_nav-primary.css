@@ -3,7 +3,7 @@
 ===========================================*/
 .c-nav-primary__bg {
   background-color: var(--black);
-  margin-bottom: var(--spacing-l);
+  margin-bottom: var(--spacing-xl);
 }
 
   .c-nav-primary {
@@ -15,7 +15,7 @@
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      gap: var(--spacing-base);
+      gap: var(--spacing-l);
       list-style-type: none;
     }
 

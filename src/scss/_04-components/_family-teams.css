@@ -5,15 +5,16 @@
     background-color: var(--white);
     border: 2px solid rgba(0, 0, 0, 0.6);
     box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.6);
-    border-radius: var(--spacing-3xs);
+    border-radius: var(--spacing-xs);
     line-height: 1;
-    padding: var(--spacing-base);
+    padding: var(--spacing-l);
 
-    &__team {
+  }
+
+    .family-teams__team {
       display: flex;
       gap: var(--spacing-2xs);
     }
-  }
 
 
 

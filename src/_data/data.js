@@ -39,10 +39,17 @@ module.exports = async function() {
     }
   });
 
+  const eurosStartDate = new Date("2024-06-14");
+  console.log(eurosStartDate.toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric'
+  }));
+
+
   // Calculate the numbers of days until the tournament starts from the current date
-  let startDate = new Date(getStartDate.currentSeason.startDate);
   let currentDate = new Date();
-  let daysUntilTournament = Math.floor((startDate - currentDate) / (1000 * 60 * 60 * 24));
+  let daysUntilTournament = Math.floor((eurosStartDate - currentDate) / (1000 * 60 * 60 * 24));
 
   
 

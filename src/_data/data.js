@@ -173,10 +173,7 @@ module.exports = async function() {
 
   // Group fixtures by date 
   let fixtures = getFixtures.matches.reduce((acc, match) => {
-    const time = new Date(match.utcDate).toLocaleTimeString('en-GB', {
-      hour: '2-digit',
-      minute: '2-digit'
-    });
+    const time = new Date(match.utcDate);
     const group = match.stage === 'GROUP_STAGE' ? match.group.replace(/_/g, ' ').toLowerCase().replace(/\b\w/g, l => l.toUpperCase()) : match.stage.replace(/_/g, ' ').toLowerCase().replace(/\b\w/g, l => l.toUpperCase());
 
     // Assign a fmaily member to each team

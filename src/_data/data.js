@@ -27,17 +27,8 @@ module.exports = async function() {
   //   });
 
 
-  /* Get the teams
+  /* Countdown timer
   ==========================================================================*/
-  let getStartDate = await EleventyFetch (`${rootPath}`, {
-    duration: "1d",
-    type: "json",
-    fetchOptions: {
-      headers: {
-        'X-Auth-Token': key
-      }
-    }
-  });
 
   const eurosStartDate = new Date("2024-06-14");
   console.log(eurosStartDate.toLocaleDateString('en-GB', {
@@ -50,14 +41,6 @@ module.exports = async function() {
   // Calculate the numbers of days until the tournament starts from the current date
   let currentDate = new Date();
   let daysUntilTournament = Math.floor((eurosStartDate - currentDate) / (1000 * 60 * 60 * 24));
-
-  
-
-
-  // let startDate = getStartDate.currentSeason.startDate;
-
-  console.log(daysUntilTournament);
-
 
   /* Get the teams
   ==========================================================================*/
@@ -92,7 +75,7 @@ module.exports = async function() {
         team.name === 'Romania' || team.name === 'Ukraine' ? 'Evie' :
         team.name === 'Turkey' || team.name === 'Georgia' ? 'Harry' :
         team.name === 'Germany' || team.name === 'Netherlands' ? 'Oscar' :
-        team.name === 'Czech Republic' ? 'Lola' :
+        team.name === 'Czechia' ? 'Lola' :
         team.name === 'Portugal' || team.name === 'Denmark' ? 'Freddie' :
         team.name === 'Belgium' ? 'Jack' :
         team.name === 'Poland' ? 'Steve' :

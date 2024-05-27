@@ -31,12 +31,6 @@ module.exports = async function() {
   ==========================================================================*/
 
   const eurosStartDate = new Date("2024-06-14");
-  console.log(eurosStartDate.toLocaleDateString('en-GB', {
-    day: 'numeric',
-    month: 'short',
-    year: 'numeric'
-  }));
-
 
   // Calculate the numbers of days until the tournament starts from the current date
   let currentDate = new Date();
@@ -73,9 +67,9 @@ module.exports = async function() {
         team.name === 'Serbia' || team.name === 'Slovakia' ? 'Clare' :
         team.name === 'France' || team.name === 'England' ? 'Ben' :
         team.name === 'Romania' || team.name === 'Ukraine' ? 'Evie' :
-        team.name === 'Turkey' || team.name === 'Georgia' ? 'Harry' :
+        team.name === 'Turkey' ? 'Harry' :
         team.name === 'Germany' || team.name === 'Netherlands' ? 'Oscar' :
-        team.name === 'Czechia' ? 'Lola' :
+        team.name === 'Czechia' || team.name === 'Georgia'? 'Lola' :
         team.name === 'Portugal' || team.name === 'Denmark' ? 'Freddie' :
         team.name === 'Belgium' ? 'Jack' :
         team.name === 'Poland' ? 'Steve' :
@@ -90,52 +84,8 @@ module.exports = async function() {
     return familyMemberEntry ? familyMemberEntry.family_member : 'Unknown';
   }
 
-  // Create a function that takes the team name and returns the family member
-  // function assignFamilyMember(team) {
-  //   let familyMember = addFamilyMember.find(familyMember => familyMember.name === team).family_member;
-  //   return familyMember;
-  // }
 
-  console.log(assignFamilyMember('Switzerland'));
-
-
-
-  // // Create a function to assign the family member to each team by name
-  // function assignFamilyMember(team) {
-  //   // Clone teams array and add a new property called 'family_member' and make this a function with the team name as the argument
-  //   let addFamilyMember = teams.map(team => {
-  //     return {
-  //       ...team,
-  //       family_member: 
-  //         team.name === 'Switzerland' || team.name === 'Scotland' ? 'Rob' :
-  //         team.name === 'Hungary' || team.name === 'Italy' ? 'Anna' :
-  //         team.name === 'Albania' || team.name === 'Slovenia' ? 'Grandad' :
-  //         team.name === 'Croatia' || team.name === 'Austria' ? 'Erin' :
-  //         team.name === 'Serbia' || team.name === 'Slovakia' ? 'Clare' :
-  //         team.name === 'France' || team.name === 'England' ? 'Ben' :
-  //         team.name === 'Romania' || team.name === 'Ukraine' ? 'Evie' :
-  //         team.name === 'Turkey' || team.name === 'Georgia' ? 'Harry' :
-  //         team.name === 'Germany' || team.name === 'Netherlands' ? 'Oscar' :
-  //         team.name === 'Czech Republic' ? 'Lola' :
-  //         team.name === 'Portugal' || team.name === 'Denmark' ? 'Freddie' :
-  //         team.name === 'Belgium' ? 'Jack' :
-  //         team.name === 'Poland' ? 'Steve' :
-  //         team.name === 'Spain' ? 'Meg' :
-  //         ''
-  //     }
-  //   });
-
-  //   // Find the team in the addFamilyMember array and return the family member
-  //   let familyMember = addFamilyMember.find(familyMember => familyMember.name === team).family_member;
-  //   return familyMember;
-  // }
-
-
-
-
-
-
-    // Group teams by family member 
+  // Group teams by family member 
   let groupByFamilyMember = addFamilyMember.reduce((acc, team) => {
     if (!acc[team.family_member]) {
       acc[team.family_member] = [];
@@ -225,8 +175,6 @@ module.exports = async function() {
       time,
       scoreHomeTeam: teamScore(homeTeamScore),
       scoreAwayTeam: teamScore(awayTeamScore),
-      // Use the assignFamilyMember function to assign a family member to each team
-      // familyMember: assignFamilyMember(homeTeam),
       familyMemberHome: assignFamilyMember(match.homeTeam.name),
       familyMemberAway: assignFamilyMember(match.awayTeam.name)
     });

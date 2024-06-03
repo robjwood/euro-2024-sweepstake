@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 24 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <rect id="albania" x="0" y="0" width="24" height="18" style="fill:none;"/>
+    <clipPath id="_clip1">
+        <rect id="albania1" serif:id="albania" x="0" y="0" width="24" height="18"/>
+    </clipPath>
+    <g clip-path="url(#_clip1)">
+        <g transform="matrix(1,0,0,1,-4,0)">
+            <g transform="matrix(1,-0,-0,1,4,-0)">
+                <use xlink:href="#_Image2" x="0" y="0" width="24px" height="18px"/>
+            </g>
+        </g>
+        <rect x="0" y="0" width="24" height="18" style="fill:rgb(255,0,0);"/>
+        <g id="Rectangle" transform="matrix(0.0177398,0,0,0.00892453,7.55313,4.69388)">
+            <rect x="140.231" y="146.352" width="224.101" height="224.101"/>
+        </g>
+        <g id="Rectangle1" serif:id="Rectangle" transform="matrix(0.0178491,0,0,0.00892453,7.53781,6.69388)">
+            <rect x="140.231" y="146.352" width="224.101" height="224.101"/>
+        </g>
+        <g id="Rectangle2" serif:id="Rectangle" transform="matrix(0.00885171,0,0,0.0312359,9.77504,0.428571)">
+            <rect x="140.231" y="146.352" width="224.101" height="224.101"/>
+        </g>
+        <g id="Rectangle3" serif:id="Rectangle" transform="matrix(0.00885171,0,0,0.00892453,13.7995,10.6939)">
+            <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill-opacity:0.25;"/>
+        </g>
+        <g id="Rectangle4" serif:id="Rectangle" transform="matrix(0.00885171,0,0,0.00892453,4.80767,6.69388)">
+            <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill-opacity:0.25;"/>
+        </g>
+        <g id="Rectangle5" serif:id="Rectangle" transform="matrix(0.00885171,0,0,0.00892453,4.80767,4.69388)">
+            <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill-opacity:0.25;"/>
+        </g>
+        <g id="Rectangle6" serif:id="Rectangle" transform="matrix(0.00885171,0,0,0.00892453,14.775,4.69388)">
+            <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill-opacity:0.25;"/>
+        </g>
+        <g id="Rectangle7" serif:id="Rectangle" transform="matrix(0.00885171,0,0,0.00892453,11.7506,10.6939)">
+            <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill-opacity:0.5;"/>
+        </g>
+        <g id="Rectangle8" serif:id="Rectangle" transform="matrix(0.00885171,0,0,0.00892453,7.80767,10.6939)">
+            <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill-opacity:0.5;"/>
+        </g>
+        <g id="Rectangle9" serif:id="Rectangle" transform="matrix(0.00885171,0,0,0.00892453,14.8077,6.69388)">
+            <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill-opacity:0.25;"/>
+        </g>
+        <g id="Rectangle10" serif:id="Rectangle" transform="matrix(0.00885171,0,0,0.00892453,13.7995,8.69388)">
+            <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill-opacity:0.25;"/>
+        </g>
+        <g id="Rectangle11" serif:id="Rectangle" transform="matrix(0.00885171,0,0,0.00892453,5.82399,8.69388)">
+            <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill-opacity:0.25;"/>
+        </g>
+        <g id="Rectangle12" serif:id="Rectangle" transform="matrix(0.00885171,0,0,0.00892453,11.8158,2.69388)">
+            <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill-opacity:0.75;"/>
+        </g>
+        <g id="Rectangle13" serif:id="Rectangle" transform="matrix(0.00885171,0,0,0.00892453,7.80767,2.69388)">
+            <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill-opacity:0.75;"/>
+        </g>
+        <g id="Rectangle14" serif:id="Rectangle" transform="matrix(0.00885171,0,0,0.0178491,6.81583,3.38776)">
+            <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill-opacity:0.75;"/>
+        </g>
+        <g id="Rectangle15" serif:id="Rectangle" transform="matrix(0.00885171,0,0,0.0178491,12.775,3.38776)">
+            <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill-opacity:0.75;"/>
+        </g>
+        <g id="Rectangle16" serif:id="Rectangle" transform="matrix(0.00885171,0,0,0.00892453,5.82399,1.69388)">
+            <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill-opacity:0.75;"/>
+        </g>
+        <g id="Rectangle17" serif:id="Rectangle" transform="matrix(0.00885171,0,0,0.00892453,13.7995,1.69388)">
+            <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill-opacity:0.75;"/>
+        </g>
+        <g id="Rectangle18" serif:id="Rectangle" transform="matrix(0.00885171,0,0,0.00892453,5.82399,10.6939)">
+            <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill-opacity:0.25;"/>
+        </g>
+        <g id="Rectangle19" serif:id="Rectangle" transform="matrix(0.00885171,0,0,0.00892453,9.76688,10.6939)">
+            <rect x="140.231" y="146.352" width="224.101" height="224.101"/>
+        </g>
+        <g id="Rectangle20" serif:id="Rectangle" transform="matrix(0.00885171,0,0,0.00892453,9.76688,1.69388)">
+            <rect x="140.231" y="146.352" width="224.101" height="224.101"/>
+        </g>
+        <g id="Rectangle21" serif:id="Rectangle" transform="matrix(0.00885171,0,0,0.00892453,7.80767,8.69388)">
+            <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill-opacity:0.75;"/>
+        </g>
+        <g id="Rectangle22" serif:id="Rectangle" transform="matrix(0.00885171,0,0,0.00892453,11.8077,8.69388)">
+            <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill-opacity:0.75;"/>
+        </g>
+    </g>
+    <defs>
+        <image id="_Image2" width="24px" height="18px" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAASCAYAAABB7B6eAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAvElEQVQ4jbVVwQ6FIAwrLyT73Pf7csKLxDlbBgd7IcjWtXNoOcz++BDVWkuDyrV2sZ/hp8jYvpD9LBcAanzQ8VQYVfu4SMwcTR14xT65k3MmAhAOWCElIuZFvBwoggwq5+XAq1ktNJsm6mCQr4yhH4qtAuyl7pynBYCnC0aYqQfEO4hEaor8PVGYTtGYc9WiEmKXC4xk7yC2qIjYCNoi1vt48VjBpU+FJ93B1k3OCHYE1Ga2HHxca/4HuXEC8BAxmOCbrc0AAAAASUVORK5CYII="/>
+    </defs>
+</svg>

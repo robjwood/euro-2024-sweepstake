@@ -38,8 +38,8 @@
 
   /* Typography
   ----------------------------------------- */
-  --font-base: "Inter", 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-  --font-accent: "Inter", 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  --font-base: "Roboto Mono", 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  --font-accent: "Roboto Mono", 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   --measure: 68ch;
 
   // Based on this: https://www.fluid-type-scale.com/calculate?minFontSize=16&minWidth=400&minRatio=1.2&maxFontSize=18&maxWidth=1200&maxRatio=1.2&steps=xs%2Cs%2Cbase%2Cl%2Cxl%2C2xl%2C3xl%2C4xl%2C5xl&baseStep=base&prefix=font-size&decimals=2&useRems=on&remValue=16&previewFont=Inter&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground
@@ -73,7 +73,7 @@
   --grey-800:           hsla(214,10%,30%,1);
   --grey-900:           hsla(214,15%,20%,1);
 
-  --black:              hsla(0,50%,10%,1);       
+  --black:              hsla(0,0%,10%,1);       
 
   --positive:           hsla(120,75%,25%,1);
   --positiveLight:      hsla(120,75%,90%,1);
@@ -84,15 +84,29 @@
   --negativeLight:      hsla(0,75%,90%,1);  
   --neutral:            hsla(200,40%,35%,1);
   --neutralLight:       hsla(200,40%,90%,1);
-    
+
+  
+
+  // --pk-primary-01--light: #143cdb;
+  // --pk-primary-02--light: #186cff;
+  // --pk-primary-03--light: #002c92;
+  // --pk-primary-04--light: #1f2369;
+
+
+
+
   --color-primary-100:  hsla(240,100%,99%,1);
   --color-primary-200:  hsla(240,100%,92%,1);
   --color-primary-300:  hsla(240,100%,80%,1);
   --color-primary-400:  hsla(240,100%,75%,1);
-  --color-primary-500:  hsl(240, 100%, 45%);
+  --color-primary-500:  #143cdb;
   --color-primary-600:  hsla(240,100%,40%,1);
   --color-primary-700:  hsla(240,100%,25%,1);
   --color-primary-900:  hsla(240,50%,25%,1);
 
-  --pk-primary-dark:    #143cdb;
+  --yellow: #F7CE43;
+  --crimson: #EA3323;
+  --green: #01BA5D ;
+  --red: #FE0000;
+  --blue: #143CDA;
 }

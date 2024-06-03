@@ -2,8 +2,8 @@
 ===========================================
 ===========================================*/
 .c-nav-primary__bg {
-  background-color: var(--black);
-  margin-bottom: var(--spacing-xl);
+  background-color: rgba(0, 0, 0, 0.3);
+  /* margin-bottom: var(--spacing-xl); */
 }
 
   .c-nav-primary {
@@ -28,3 +28,21 @@
       .c-nav-primary [aria-current="page"] {
         font-weight: bold;
       }    
+
+.colour-banner { 
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  margin-block-end: var(--spacing-3xl);
+}
+
+.colour-banner > * {
+  height: var(--spacing-2xs);
+}
+
+.colour-banner .yellow  { background-color: var(--yellow); }
+.colour-banner .crimson { background-color: var(--crimson); }
+.colour-banner .green   { background-color: var(--green); }
+.colour-banner .red     { background-color: var(--red); }
+.colour-banner .blue    { background-color: var(--blue); }
+.colour-banner .black   { background-color: var(--black); }
+.colour-banner .white   { background-color: var(--white); }

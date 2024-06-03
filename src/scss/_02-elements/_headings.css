@@ -8,35 +8,24 @@ h3,
 h4,
 h5,
 h6 {
-  /* background-color: var(--white); */
-  /* border-radius: var(--spacing-s); */
+  color: var(--white);
   font-family: var(--font-accent);
   line-height: var(--line-height-xs);
-  /* padding: var(--spacing-base); */
 }
 
 h1 {
   font-size: var(--font-size-3xl);
-  font-weight: 900;
-  font-variation-settings: "slnt" -10;
-  text-shadow:
-    -8px -8px 4px white,
-    0 -8px 4px white,
-    8px -8px 4px white,
-    -8px 8px 4px white,
-    0 8px 4px white,
-    8px -8px 4px white;
+  font-style: normal;
+  font-optical-sizing: auto;
+  font-weight: 700;
 
-  text-shadow:
-    6px 6px 6px white,
-    6px -6px 6px white,
-    -6px 6px 6px white,
-    -6px -6px 6px white,
-    1px 0px 6px white,
-    0px 6px 6px white,
-    -6px 0px 6px white,
-    0px -6px 6px white;
-}
+  /*
+  font-variation-settings: 
+    "slnt" 0,
+    "wdth" 120,
+    "GRAD" -200,
+  */
+  }
 
 h2 {
   font-size: var(--font-size-l);

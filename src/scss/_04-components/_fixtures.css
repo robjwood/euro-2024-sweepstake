@@ -1,27 +1,41 @@
 /* Buttons
 ========================================================================== */
 
+.fixture__grid {
+  display: grid;
+  gap: var(--spacing-l);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-top: var(--spacing-xl);
+}
+
   .fixture {
     background-color: var(--white);
-    border: 2px solid rgba(0, 0, 0, 0.6);
+    border-radius: var(--spacing-xs);
     box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.6);
-    border-radius: var(--spacing-3xs);
     line-height: 1;
     padding: var(--spacing-xl);
-    text-align: center;
   }
 
-  
     .fixture__details {
+      display: flex;
+      grid-template-columns: 1fr auto 1fr;
+      gap: var(--spacing-xs);
+    }
+
+    .fixture__wrapper {
+      /*
       display: grid;
       align-items: center;
       grid-template-columns: 1fr auto 1fr;
       gap: var(--spacing-xs);
+      */
     }
 
     .fixture__stage {
       font-size: var(--font-size-s);
       color: var(--grey-500);
+      text-transform: uppercase;
+      letter-spacing: 0.04rem;
     }
 
     .fixture__home,
@@ -29,10 +43,6 @@
       display: flex;
       align-items: center;
       gap: var(--spacing-xs);
-    }
-
-    .fixture__home {
-      justify-content: flex-end;
     }
 
     .fixture__score {

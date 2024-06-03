@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 24 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <rect id="serbia" x="0" y="0" width="24" height="18" style="fill:none;"/>
+    <g id="serbia1" serif:id="serbia">
+        <g transform="matrix(1.04348,0,0,1.2,-1.04348,10.8)">
+            <rect x="1" y="1" width="23" height="5" style="fill:white;"/>
+        </g>
+        <g transform="matrix(1.04348,0,0,1.2,-1.04348,4.8)">
+            <rect x="1" y="1" width="23" height="5" style="fill:rgb(32,40,223);"/>
+        </g>
+        <g transform="matrix(1.04348,0,0,1.2,-1.04348,-1.2)">
+            <rect x="1" y="1" width="23" height="5" style="fill:rgb(223,32,32);"/>
+        </g>
+        <g transform="matrix(0.5,0,0,0.5,3.5,1)">
+            <rect x="6" y="6" width="4" height="4" style="fill:white;"/>
+        </g>
+        <g transform="matrix(0.5,0,0,0.5,3,9)">
+            <rect x="6" y="6" width="4" height="4" style="fill:rgb(241,13,13);"/>
+        </g>
+        <g transform="matrix(0.5,0,0,0.5,1,9)">
+            <rect x="6" y="6" width="4" height="4" style="fill:rgb(241,13,13);fill-opacity:0.25;"/>
+        </g>
+        <g transform="matrix(0.5,0,0,0.5,7,9)">
+            <rect x="6" y="6" width="4" height="4" style="fill:rgb(241,13,13);fill-opacity:0.25;"/>
+        </g>
+        <g transform="matrix(0.5,0,0,0.5,5,9)">
+            <rect x="6" y="6" width="4" height="4" style="fill:rgb(241,13,13);"/>
+        </g>
+        <g transform="matrix(0.5,0,0,0.5,4,5)">
+            <rect x="6" y="6" width="4" height="4" style="fill:white;"/>
+        </g>
+        <g transform="matrix(0.5,0,0,0.5,3.5,1)">
+            <rect x="6" y="6" width="4" height="4" style="fill:white;"/>
+        </g>
+        <g transform="matrix(0.5,0,0,1.5,1,-3)">
+            <rect x="6" y="6" width="4" height="4" style="fill:rgb(241,13,13);"/>
+        </g>
+        <g transform="matrix(0.5,0,0,1.5,7,-3)">
+            <rect x="6" y="6" width="4" height="4" style="fill:rgb(241,13,13);"/>
+        </g>
+        <g transform="matrix(0.5,0,0,0.111111,6,4)">
+            <rect x="0" y="0" width="8" height="18" style="fill:rgb(244,213,39);"/>
+        </g>
+    </g>
+</svg>

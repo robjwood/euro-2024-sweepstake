@@ -8,35 +8,35 @@ title: Fixtures
 
     <h2>{{ item[0] }}</h2>
 
-    {% for match in item[1] %}
-      <div class="fixture flow">
-        <span class="fixture__stage">{{ match.group }}</span>
-        
-        <div class="fixture__details">
-          <div class="fixture__home">
-            <span class="family-member">{{ match.familyMemberHome }}</span> <span>{{ match.homeTeam }}</span>
-            
-            {% if match.homeTeamCrest %}
-              <img src="{{ match.homeTeamCrest }}" alt="{{ match.homeTeam }} flag" width="32" height="18" />
-            {% endif %}
-
-            <span class="fixture__score">{{ match.scoreHomeTeam }}</span>
-          </div>
-
-          <span class="fixture__time">{{ match.time }}</span>
+      <div class="fixture__grid">
+        {% for match in item[1] %}
+        <div class="fixture flow">
+          <span class="fixture__stage">{{ match.group }}</span>
           
-          <div class="fixture__away">
-            <span class="fixture__score">{{ match.scoreAwayTeam }}</span>
-            
-            {% if match.awayTeamCrest %}
-              <img src="{{ match.awayTeamCrest }}" alt="{{ match.awayTeam }} flag" width="32" height="18" />
-            {% endif %}
+          <div class="fixture__details">
+            <div class="fixture__wrapper flow">
+              <div class="fixture__home">
+                <img src="{{ match.homeTeamCrest }}" alt="{{ match.homeTeam }} flag" width="32" height="18" />
+                <p>{{ match.homeTeam }}</p>
+                <p class="family-member">{{ match.familyMemberHome }}</p> 
+                <p class="fixture__score">{{ match.scoreHomeTeam }}</p>
+              </div>
 
-            <span>{{ match.awayTeam }}</span> <span class="family-member">{{ match.familyMemberAway }}</span>
-          </div>  
+              
+              <div class="fixture__away">
+                <img src="{{ match.awayTeamCrest }}" alt="{{ match.awayTeam }} flag" width="32" height="18" />
+                <p>{{ match.awayTeam }}</p>
+                <p class="family-member">{{ match.familyMemberAway }}</p>
+                <p class="fixture__score">3</p>
+              </div>  
+
+            </div>
+            
+            <span class="fixture__time">{{ match.time }}</span>
+          </div>
         </div>
+        {% endfor %}
       </div>
-    {% endfor %}
   
   </section>
 {% endfor %}

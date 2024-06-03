@@ -5,28 +5,6 @@ const key = process.env.API_KEY;
 // const headers = { "X-Auth-Token": key };
 
 module.exports = async function() {
-  // return fetch(rootPath, { headers })
-  //   .then(async (response) => {
-  //     // If the response is successful, get the JSON
-  //     if (response.ok) {
-  //       return response.json();
-  //     }
-  //     // Otherwise, throw an error
-  //     const json = await response.json();
-  //     throw json;
-  //   })
-  //   .then((data) => {
-  //     // The returned data
-  //     return {
-  //       startDate: data.currentSeason.startDate
-  //     };
-  //   })
-  //   .catch((error) => {
-  //     // There was an error
-  //     console.error('******SOMETHING BAD HAS HAPPENED!******', error);
-  //   });
-
-
   /* Countdown timer
   ==========================================================================*/
 
@@ -51,7 +29,7 @@ module.exports = async function() {
   let teams = getTeams.teams.map(team => {
     return {
       name: team.name,
-      crest: `/images/crests/${team.name.replace(/ /g, '-').toLowerCase()}.png`
+      crest: `/images/crests/${team.name.replace(/ /g, '-').toLowerCase()}.svg`
     }
   });
 
@@ -146,7 +124,8 @@ module.exports = async function() {
     const homeTeamScore = match.score.fullTime.homeTeam;
     const awayTeamScore = match.score.fullTime.awayTeam;
 
-    const homeTeamCrest = match.homeTeam.crest;
+    // Get the teamCrest
+    const homeTeamCrest = match.homeTeam.crest; 
     const awayTeamCrest = match.awayTeam.crest;
 
     function teamScore(team) {

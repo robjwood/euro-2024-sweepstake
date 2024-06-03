@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 24 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <rect id="czechia" x="0" y="0" width="24" height="18" style="fill:none;"/>
+    <clipPath id="_clip1">
+        <rect id="czechia1" serif:id="czechia" x="0" y="0" width="24" height="18"/>
+    </clipPath>
+    <g clip-path="url(#_clip1)">
+        <g transform="matrix(1.04348,0,0,1.8,-1.04348,7.2)">
+            <rect x="1" y="1" width="23" height="5" style="fill:rgb(255,0,0);"/>
+        </g>
+        <g transform="matrix(1.04348,0,0,1.8,-1.04348,-1.8)">
+            <rect x="1" y="1" width="23" height="5" style="fill:white;"/>
+        </g>
+        <g>
+            <g id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,6.74851,6.69388)">
+                <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
+            </g>
+            <g id="Rectangle1" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,4.74851,4.69388)">
+                <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
+            </g>
+            <g id="Rectangle2" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,2.74851,2.69388)">
+                <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
+            </g>
+            <g id="Rectangle3" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,0.748505,0.693878)">
+                <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
+            </g>
+            <g id="Rectangle4" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,-1.25149,-1.30612)">
+                <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
+            </g>
+            <g transform="matrix(0.666667,0,0,1,-1.77636e-15,0)">
+                <rect x="0" y="2" width="6" height="8" style="fill:rgb(0,11,255);"/>
+            </g>
+            <g transform="matrix(1,0,0,1,-2,0)">
+                <rect x="6" y="6" width="4" height="4" style="fill:rgb(0,11,255);"/>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,-1,0,19)">
+            <g id="Rectangle5" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,6.74851,6.69388)">
+                <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
+            </g>
+            <g id="Rectangle6" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,4.74851,4.69388)">
+                <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
+            </g>
+            <g id="Rectangle7" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,2.74851,2.69388)">
+                <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
+            </g>
+            <g id="Rectangle8" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,0.748505,0.693878)">
+                <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
+            </g>
+            <g id="Rectangle9" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,-1.25149,-1.30612)">
+                <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
+            </g>
+            <g transform="matrix(0.666667,0,0,1,-1.77636e-15,0)">
+                <rect x="0" y="2" width="6" height="8" style="fill:rgb(0,11,255);"/>
+            </g>
+            <g transform="matrix(1,0,0,1,-2,0)">
+                <rect x="6" y="6" width="4" height="4" style="fill:rgb(0,11,255);"/>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,19 +1,7 @@
 const EleventyFetch = require("@11ty/eleventy-fetch");
 const rootPath = "https://api.football-data.org/v4/competitions/EC";
-// Create a variable to store the API key
-const key = process.env.API_KEY;
-// const headers = { "X-Auth-Token": key };
 
 module.exports = async function() {
-  /* Countdown timer
-  ==========================================================================*/
-
-  const eurosStartDate = new Date("2024-06-14");
-
-  // Calculate the numbers of days until the tournament starts from the current date
-  let currentDate = new Date();
-  let daysUntilTournament = Math.floor((eurosStartDate - currentDate) / (1000 * 60 * 60 * 24));
-
   /* Get the teams
   ==========================================================================*/
   let getTeams = await EleventyFetch (`${rootPath}/teams`, {
@@ -79,7 +67,7 @@ module.exports = async function() {
       teams: groupByFamilyMember[familyMember].map(team => {
         return {
           name: team.name,
-          crest: team.crest
+          crest: `/images/crests/${team.name.replace(/ /g, '-').toLowerCase()}.svg`
         }
       })
     }
@@ -108,16 +96,9 @@ module.exports = async function() {
       timeZone: 'Europe/London'
     });
 
-
-    // const time = new Date(match.utcDate).toLocaleTimeString('en-GB', {
-    //   hour: '2-digit',
-    //   minute: '2-digit'
-    // });
     const group = match.stage === 'GROUP_STAGE' ? match.group.replace(/_/g, ' ').toLowerCase().replace(/\b\w/g, l => l.toUpperCase()) : match.stage.replace(/_/g, ' ').toLowerCase().replace(/\b\w/g, l => l.toUpperCase());
 
-    // Assign a fmaily member to each team
-
-    
+    // Assign a fmaily member to each team    
     const homeTeam = match.homeTeam.name === null ? 'TBC' : match.homeTeam.name;
     const awayTeam = match.awayTeam.name === null ? 'TBC' : match.awayTeam.name;
     
@@ -125,20 +106,28 @@ module.exports = async function() {
     const awayTeamScore = match.score.fullTime.awayTeam;
 
     // Get the teamCrest
-    const homeTeamCrest = match.homeTeam.crest; 
-    const awayTeamCrest = match.awayTeam.crest;
+    // const homeTeamCrest = match.homeTeam.crest; 
+    // const awayTeamCrest = match.awayTeam.crest;
+
+    console.log(`/images/crests/${homeTeam.replace(/ /g, '-').toLowerCase()}.svg`);
+    const homeTeamCrest = `/images/crests/${homeTeam.replace(/ /g, '-').toLowerCase()}.svg`; 
+    const awayTeamCrest = `/images/crests/${awayTeam.replace(/ /g, '-').toLowerCase()}.svg`;
 
     function teamScore(team) {
       return match.score.fullTime[team] !== undefined ? `${match.score.fullTime[team]}` : '';
     }
     
     function dateString(date) {
-      return new Date(date).toLocaleDateString('en-GB', {
+      const fixtureDate = new Date(date).toLocaleDateString('en-GB', {
+        weekday: 'short',
         day: 'numeric',
         month: 'short',
         year: 'numeric'
       });
+
+      return fixtureDate.replace(/, /g, " ");
     }
+
 
     if (!acc[dateString(match.utcDate)]) {
       acc[dateString(match.utcDate)] = [];
@@ -162,9 +151,6 @@ module.exports = async function() {
   }, {});
 
 
-
-
-
   /* Get the standings
   ==========================================================================*/
   let getStandings = await EleventyFetch (`${rootPath}/standings`, {
@@ -185,7 +171,7 @@ module.exports = async function() {
         return {
           position: team.position,
           team: team.team.name,
-          crest: team.team.crest,
+          crest: `/images/crests/${team.team.name.replace(/ /g, '-').toLowerCase()}.svg`,
           playedGames: team.playedGames,
           won: team.won,
           draw: team.draw,
@@ -222,6 +208,5 @@ module.exports = async function() {
     fixtures,
     standings,
     topScorers,
-    daysUntilTournament
   };
 };

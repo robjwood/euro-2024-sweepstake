@@ -14,7 +14,7 @@ layout: page.njk
     <div class="family-teams__body flow">
       {% for team in item.teams %}
         <div class="family-teams__team">
-          <img src="{{ team.crest }}" alt="Flag of {{ team.name }}" width="24" height="18" />
+          <img src="{{ team.crest }}" alt="Flag of {{ team.name }}" width="24" height="18" class="crest" />
           <p>{{ team.name }}</p>
         </div>
       {% endfor %}

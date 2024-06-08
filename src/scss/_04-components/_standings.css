@@ -2,25 +2,37 @@
 ========================================================================== */
 
   .standings {
-    --flow-space: var(--spacing-l);
+    --flow-space: var(--spacing-2xl);
   }
+
+    .standings__grid {
+      display: grid;
+      gap: var(--spacing-2xl);
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
 
   .group-table {
     background-color: var(--white);
+    box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.4);
   }
+
+    .group-table thead {
+      background-color: var(--color-primary-800);
+      color: var(--color-primary-100);
+    }
+
+      .group-table thead th {
+        border: 1px solid var(--color-primary-800);
+      }
 
   .group-table th,
   .group-table td {
+    border: 1px solid var(--color-primary-100);
     padding: var(--spacing-base);
     vertical-align: top;
   }
 
-  .group-table th,
-  .group-table td {
-    border: 1px solid var(--black);
-  }
-
-  .group-table th[scope="row"] {
+  .group-table .standings__team-details {
     font-weight: normal;
     display: flex;
     align-items: center;

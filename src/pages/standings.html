@@ -3,29 +3,35 @@ title: Standings
 ---
 
 <div class="flow">
-  {% for item in data.standings %}
-  <section class="standings flow">
-    <h2>{{ item.group }}</h2>
-    <table class="group-table">
-      <thead>
-        <tr>
-          <th>Team</th>
-          <th>Pld</th>
-          <th>GD</th>
-          <th>Pts</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for team in item.table %}
-        <tr class="standings__team" >
-          <th scope="row"><img src="{{ team.crest }}" width="20" /> {{ team.team }} <span class="family-member">{{ team.familyMember }}</span></th>
-          <td>{{ team.playedGames }}</td>
-          <td>{{ team.goalDifference }}</td>
-          <td>{{ team.points }}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  </section>
-  {% endfor %}
+  <div class="standings__grid">
+    {% for item in data.standings %}
+    <section class="standings flow">
+      <h2>{{ item.group }}</h2>
+      <table class="group-table">
+        <thead>
+          <tr>
+            <th>Team</th>
+            <th>Pld</th>
+            <th>GD</th>
+            <th>Pts</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for team in item.table %}
+          <tr class="standings__team" >
+            <th scope="row">
+              <div class="standings__team-details">
+                <img src="{{ team.crest }}" alt="Flag of {{ team.team }}" width="24" height="18" class="crest" /> <span>{{ team.team }}</span> <span class="family-member">{{ team.familyMember }}</span>
+              </div>
+            </th>
+            <td>{{ team.playedGames }}</td>
+            <td>{{ team.goalDifference }}</td>
+            <td>{{ team.points }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </section>
+    {% endfor %}
+  </div>
 </div>

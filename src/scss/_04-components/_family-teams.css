@@ -30,9 +30,3 @@
       gap: var(--spacing-s);
     }
 
-    .family-teams__team img {
-      box-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 0.8);
-      border-radius: var(--spacing-3xs);
-    }  
-
-

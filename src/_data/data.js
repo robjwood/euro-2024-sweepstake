@@ -26,20 +26,20 @@ module.exports = async function() {
     return {
       ...team,
       family_member: 
-        team.name === 'Switzerland' || team.name === 'Scotland' ? 'Rob' :
-        team.name === 'Hungary' || team.name === 'Italy' ? 'Anna' :
-        team.name === 'Albania' || team.name === 'Slovenia' ? 'Grandad' :
-        team.name === 'Croatia' || team.name === 'Austria' ? 'Erin' :
-        team.name === 'Serbia' || team.name === 'Slovakia' ? 'Clare' :
-        team.name === 'France' || team.name === 'England' ? 'Ben' :
-        team.name === 'Romania' || team.name === 'Ukraine' ? 'Evie' :
-        team.name === 'Turkey' ? 'Harry' :
-        team.name === 'Germany' || team.name === 'Netherlands' ? 'Oscar' :
-        team.name === 'Czechia' || team.name === 'Georgia'? 'Lola' :
-        team.name === 'Portugal' || team.name === 'Denmark' ? 'Freddie' :
-        team.name === 'Belgium' ? 'Jack' :
-        team.name === 'Poland' ? 'Steve' :
-        team.name === 'Spain' ? 'Meg' :
+        team.name === 'Ukraine' || team.name === 'Hungary' ? 'Rob' :
+        team.name === 'Denmark' || team.name === 'Spain' ? 'Anna' :
+        team.name === 'Poland' || team.name === 'England' ? 'Grandad' :
+        team.name === 'Slovenia' ? 'Erin' :
+        team.name === 'Slovakia' || team.name === 'Italy' ? 'Clare' :
+        team.name === 'Portugal' || team.name === 'Austria' ? 'Ben' :
+        team.name === 'Albania' || team.name === 'Romania' ? 'Evie' :
+        team.name === 'Croatia' ? 'Harry' :
+        team.name === 'Netherlands' || team.name === 'Serbia' ? 'Oscar' :
+        team.name === 'Germany' || team.name === 'Belgium'? 'Lola' :
+        team.name === 'Georgia' || team.name === 'Scotland' ? 'Freddie' :
+        team.name === 'Switzerland' ? 'Jack' :
+        team.name === 'France' || team.name === 'Turkey' ? 'Steve' :
+        team.name === 'Czechia' ? 'Meg' :
         ''
     }
   });
@@ -70,9 +70,9 @@ module.exports = async function() {
           crest: `/images/crests/${team.name.replace(/ /g, '-').toLowerCase()}.svg`
         }
       })
-    }
-  });
-
+    };
+  }).sort((a, b) => a.familyMember.localeCompare(b.familyMember));
+  
 
   
   /* Get the fixtures
@@ -105,11 +105,6 @@ module.exports = async function() {
     const homeTeamScore = match.score.fullTime.homeTeam;
     const awayTeamScore = match.score.fullTime.awayTeam;
 
-    // Get the teamCrest
-    // const homeTeamCrest = match.homeTeam.crest; 
-    // const awayTeamCrest = match.awayTeam.crest;
-
-    console.log(`/images/crests/${homeTeam.replace(/ /g, '-').toLowerCase()}.svg`);
     const homeTeamCrest = `/images/crests/${homeTeam.replace(/ /g, '-').toLowerCase()}.svg`; 
     const awayTeamCrest = `/images/crests/${awayTeam.replace(/ /g, '-').toLowerCase()}.svg`;
 

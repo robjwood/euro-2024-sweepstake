@@ -1,22 +1,33 @@
 {% set currentUrl %}{{ page.url }}{% endset %}
-<script type="module" src="/components/theme-switcher.js"></script>
+
 
 <div class="c-nav-primary__bg">
   <nav class="o-wrapper c-nav-primary">
-    <ul class="padding-left:0 flex" role="list">
-      <li>
-        <a {% if currentUrl === '/' %}aria-current="page"{% endif %} href="/"><img src="/images/euro-2024-logo.svg" alt="Euro 2024 logo" width="32" /></a>
-      </li>
-      {% for item in navigation.top %}
-      <li>
-        <a
-          href="{{ item.url }}"
-          {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
-        >
-          {{ item.text }}
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
+    <input data-function="swipe" id="swipe" type="checkbox">
+    <label data-function="swipe" for="swipe">
+      <svg class="icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="line line1" d="M5 9H27V11H5V9Z" fill="white"/>
+        <path class="line line2" d="M5 15H27V17H5V15Z" fill="white"/>
+        <path class="line line3" d="M27 21H5V23H27V21Z" fill="white"/>
+      </svg>
+    </label>
+
+    <a {% if currentUrl === '/' %}aria-current="page"{% endif %} href="/" class="logo">
+      <img src="/images/euro-2024-logo.svg" alt="Euro 2024 logo" height="32" class="logo" />
+    </a>
+    <div class="sidebar">
+      <ul>
+        {% for item in navigation.top %}
+        <li>
+          <a
+            href="{{ item.url }}"
+            {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
+          >
+            {{ item.text }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
   </nav>
 </div>

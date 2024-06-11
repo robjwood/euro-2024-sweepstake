@@ -11,18 +11,26 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
+  .fixture__grid header {
+    background-color: var(--color-primary-700);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-s);
+    padding-inline: var(--spacing-l);
+    padding-block: var(--spacing-base);
+  }
+
   .fixture__card {
     background-color: var(--white);
-    border-radius: var(--spacing-xs);
-    box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.6);
+    box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.4);
     line-height: 1;
-    padding: var(--spacing-xl);
   }
 
     .fixture__details {
       display: flex;
       grid-template-columns: 1fr auto 1fr;
       gap: var(--spacing-xs);
+      padding: var(--spacing-l);
     }
 
     .fixture__wrapper {

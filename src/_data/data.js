@@ -70,9 +70,9 @@ module.exports = async function() {
           crest: `/images/crests/${team.name.replace(/ /g, '-').toLowerCase()}.svg`
         }
       })
-    }
-  });
-
+    };
+  }).sort((a, b) => a.familyMember.localeCompare(b.familyMember));
+  
 
   
   /* Get the fixtures
@@ -105,11 +105,6 @@ module.exports = async function() {
     const homeTeamScore = match.score.fullTime.homeTeam;
     const awayTeamScore = match.score.fullTime.awayTeam;
 
-    // Get the teamCrest
-    // const homeTeamCrest = match.homeTeam.crest; 
-    // const awayTeamCrest = match.awayTeam.crest;
-
-    console.log(`/images/crests/${homeTeam.replace(/ /g, '-').toLowerCase()}.svg`);
     const homeTeamCrest = `/images/crests/${homeTeam.replace(/ /g, '-').toLowerCase()}.svg`; 
     const awayTeamCrest = `/images/crests/${awayTeam.replace(/ /g, '-').toLowerCase()}.svg`;
 

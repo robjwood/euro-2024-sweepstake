@@ -14,5 +14,43 @@
                 <rect x="0" y="0" width="24" height="4" style="fill:rgb(241,13,13);"/>
             </g>
         </g>
+        <g id="badge">
+            <g transform="matrix(0.25,0,0,0.111111,6,7)">
+                <rect x="0" y="0" width="8" height="18" style="fill:rgb(241,13,13);fill-opacity:0.25;"/>
+            </g>
+            <g transform="matrix(0.25,0,0,0.111111,8,7)">
+                <rect x="0" y="0" width="8" height="18" style="fill:white;fill-opacity:0.5;"/>
+            </g>
+            <g transform="matrix(0.25,0,0,0.111111,6,9)">
+                <rect x="0" y="0" width="8" height="18" style="fill:rgb(255,237,0);fill-opacity:0.75;"/>
+            </g>
+            <g transform="matrix(0.25,0,0,0.111111,8,9)">
+                <rect x="0" y="0" width="8" height="18" style="fill:rgb(241,13,13);fill-opacity:0.25;"/>
+            </g>
+            <g transform="matrix(0.5,0,0,0.111111,6,5)">
+                <rect x="0" y="0" width="8" height="18" style="fill:rgb(244,213,39);"/>
+            </g>
+            <g transform="matrix(0.5,0,0,0.111111,6,11)">
+                <rect x="0" y="0" width="8" height="18" style="fill:rgb(244,213,39);"/>
+            </g>
+            <g transform="matrix(3.06162e-17,-0.5,0.111111,6.80359e-18,4,11)">
+                <rect x="0" y="0" width="8" height="18" style="fill:rgb(244,213,39);"/>
+            </g>
+            <g transform="matrix(1.53081e-17,-0.25,0.111111,6.80359e-18,4,7)">
+                <rect x="0" y="0" width="8" height="18" style="fill:rgb(244,213,39);fill-opacity:0.4;"/>
+            </g>
+            <g transform="matrix(1.53081e-17,-0.25,0.111111,6.80359e-18,10,7)">
+                <rect x="0" y="0" width="8" height="18" style="fill:rgb(244,213,39);fill-opacity:0.4;"/>
+            </g>
+            <g transform="matrix(1.53081e-17,-0.25,0.111111,6.80359e-18,4,13)">
+                <rect x="0" y="0" width="8" height="18" style="fill:rgb(244,213,39);fill-opacity:0.4;"/>
+            </g>
+            <g transform="matrix(1.53081e-17,-0.25,0.111111,6.80359e-18,10,13)">
+                <rect x="0" y="0" width="8" height="18" style="fill:rgb(244,213,39);fill-opacity:0.4;"/>
+            </g>
+            <g transform="matrix(3.06162e-17,-0.5,0.111111,6.80359e-18,10,11)">
+                <rect x="0" y="0" width="8" height="18" style="fill:rgb(244,213,39);"/>
+            </g>
+        </g>
     </g>
 </svg>

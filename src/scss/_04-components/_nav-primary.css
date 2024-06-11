@@ -7,8 +7,9 @@
 
   .c-nav-primary {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
   }
 
     .c-nav-primary ul {
@@ -47,7 +48,9 @@
 .colour-banner .black   { background-color: var(--black); }
 .colour-banner .white   { background-color: var(--white); }
 
-
+.logo img {
+  height: 44px;
+}
 
 
 
@@ -76,14 +79,13 @@
 }
 
 .c-nav-primary label[data-function*=swipe] {
-  position: absolute;
-  top: 16px;
-  right: 16px;
   cursor: pointer;
+  line-height: 0;
 }
 
 .c-nav-primary input[data-function*=swipe]:checked ~ label[data-function*=swipe] {
-  transform: translate3d(-260px, 0, 0);
+  /* transform: translate3d(-260px, 0, 0); */
+  z-index: 999;
 }
 
 .c-nav-primary input[data-function*=swipe]:checked ~ .content {
@@ -105,19 +107,7 @@
   width: 100%;
 }
 
-.c-nav-primary .sidebar {
-  transform: translate3d(260px, 0px, 0px);
-  position: absolute;
-  width: 260px;
-  color: var(--white);
-  top: 0;
-  right: 0;
-  height: 100%;
-  transition: all 0.3s;
-}
-
 .c-nav-primary ul {
-  background-color: var(--color-primary-500);
   list-style-type: none;
   display: block;
   padding-block: var(--spacing-s);
@@ -128,18 +118,41 @@
   width: 100%;
 }
 
+.c-nav-primary .sidebar {
+  transform: translate3d(260px, 0px, 0px);
+  position: absolute;
+  width: 260px;
+  top: 0;
+  right: 0;
+  height: 100%;
+  transition: all 0.3s;
+}
+
 .c-nav-primary a:not([class^=btn]) {
   color: var(--white);
   display: flex;
-  padding-block: var(--spacing-base);
   text-decoration: none;
+  padding: var(--spacing-s);
 }
+
+.c-nav-primary .sidebar ul {
+  background-color: var(--color-primary-800);
+}
+.c-nav-primary .sidebar a {
+  padding: var(--spacing-l);
+}
+
+
 
 .wide {
   width: 100%;
 }
 
 @media (min-width: 645px) {
+  .c-nav-primary {
+    flex-direction: row;
+  }
+
   .c-nav-primary label[data-function*=swipe] {
     display: none;
   }
@@ -160,7 +173,15 @@
     align-items: center;
     gap: var(--spacing-l);
   }
+  .c-nav-primary .sidebar ul {
+    background-color: transparent;
+  }
   .c-nav-primary a:hover {
     text-decoration: underline;
   }
+
+  .c-nav-primary a:not([class^=btn]) {
+    padding-block: var(--spacing-base);
+  }
+  
 }

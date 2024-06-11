@@ -12,50 +12,53 @@
         <g transform="matrix(1.04348,0,0,1.8,-1.04348,-1.8)">
             <rect x="1" y="1" width="23" height="5" style="fill:white;"/>
         </g>
-        <g>
-            <g id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,6.74851,6.69388)">
+        <g id="triangle2">
+            <g transform="matrix(1,0,0,-1,2,18.5)">
+                <g id="edge" opacity="0.15">
+                    <g id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,6.74851,6.69388)">
+                        <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
+                    </g>
+                    <g id="Rectangle1" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,4.74851,4.69388)">
+                        <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
+                    </g>
+                    <g id="Rectangle2" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,2.74851,2.69388)">
+                        <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
+                    </g>
+                    <g id="Rectangle3" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,0.748505,0.693878)">
+                        <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
+                    </g>
+                    <g id="Rectangle4" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,-1.25149,-1.30612)">
+                        <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
+                    </g>
+                </g>
+                <g id="Rectangle5" serif:id="Rectangle" transform="matrix(0.0356981,0,0,0.00892453,-5.00598,6.69388)">
+                    <path d="M196.256,-301.851L252.282,-301.851L252.282,-77.749L308.307,-77.749L308.307,146.352L364.332,146.352L364.332,370.453L140.231,370.453L140.231,-525.952L196.256,-525.952L196.256,-301.851Z" style="fill:rgb(0,11,255);"/>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,2,0)">
+                <g id="edge1" serif:id="edge" opacity="0.15">
+                    <g id="Rectangle6" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,6.74851,6.69388)">
+                        <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
+                    </g>
+                    <g id="Rectangle7" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,4.74851,4.69388)">
+                        <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
+                    </g>
+                    <g id="Rectangle8" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,2.74851,2.69388)">
+                        <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
+                    </g>
+                    <g id="Rectangle9" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,0.748505,0.693878)">
+                        <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
+                    </g>
+                    <g id="Rectangle10" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,-1.25149,-1.30612)">
+                        <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
+                    </g>
+                </g>
+                <g id="Rectangle11" serif:id="Rectangle" transform="matrix(0.0356981,0,0,0.00892453,-5.00598,6.69388)">
+                    <path d="M196.256,-301.851L252.282,-301.851L252.282,-77.749L308.307,-77.749L308.307,146.352L364.332,146.352L364.332,370.453L140.231,370.453L140.231,-525.952L196.256,-525.952L196.256,-301.851Z" style="fill:rgb(0,11,255);"/>
+                </g>
+            </g>
+            <g id="Rectangle12" serif:id="Rectangle" transform="matrix(0.0092124,-9.03445e-18,1.16439e-17,-0.0803208,-1.29186,29.7551)">
                 <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
-            </g>
-            <g id="Rectangle1" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,4.74851,4.69388)">
-                <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
-            </g>
-            <g id="Rectangle2" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,2.74851,2.69388)">
-                <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
-            </g>
-            <g id="Rectangle3" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,0.748505,0.693878)">
-                <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
-            </g>
-            <g id="Rectangle4" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,-1.25149,-1.30612)">
-                <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
-            </g>
-            <g transform="matrix(0.666667,0,0,1,-1.77636e-15,0)">
-                <rect x="0" y="2" width="6" height="8" style="fill:rgb(0,11,255);"/>
-            </g>
-            <g transform="matrix(1,0,0,1,-2,0)">
-                <rect x="6" y="6" width="4" height="4" style="fill:rgb(0,11,255);"/>
-            </g>
-        </g>
-        <g transform="matrix(1,0,0,-1,0,19)">
-            <g id="Rectangle5" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,6.74851,6.69388)">
-                <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
-            </g>
-            <g id="Rectangle6" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,4.74851,4.69388)">
-                <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
-            </g>
-            <g id="Rectangle7" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,2.74851,2.69388)">
-                <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
-            </g>
-            <g id="Rectangle8" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,0.748505,0.693878)">
-                <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
-            </g>
-            <g id="Rectangle9" serif:id="Rectangle" transform="matrix(0.00892453,0,0,0.00892453,-1.25149,-1.30612)">
-                <rect x="140.231" y="146.352" width="224.101" height="224.101" style="fill:rgb(0,11,255);"/>
-            </g>
-            <g transform="matrix(0.666667,0,0,1,-1.77636e-15,0)">
-                <rect x="0" y="2" width="6" height="8" style="fill:rgb(0,11,255);"/>
-            </g>
-            <g transform="matrix(1,0,0,1,-2,0)">
-                <rect x="6" y="6" width="4" height="4" style="fill:rgb(0,11,255);"/>
             </g>
         </g>
     </g>

@@ -7,8 +7,10 @@ title: Fixtures
     <h2>{{ item[0] }}</h2>
     <div class="fixture__grid">
       {% for match in item[1] %}
-      <div class="fixture__card flow">
-        <span class="fixture__stage">{{ match.group }}</span>
+      <div class="fixture__card">
+        <header>
+          <span class="fixture__stage">{{ match.group }}</span>
+        </header>
         
         <div class="fixture__details">
           <div class="fixture__wrapper flow">

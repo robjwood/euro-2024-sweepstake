@@ -8,12 +8,13 @@
     .standings__grid {
       display: grid;
       gap: var(--spacing-2xl);
-      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
     }
 
   .group-table {
     background-color: var(--white);
     box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.4);
+    width: 100%;
   }
 
     .group-table thead {

@@ -8,7 +8,7 @@
     .standings__grid {
       display: grid;
       gap: var(--spacing-2xl);
-      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
     }
 
   .group-table {
@@ -40,6 +40,9 @@
     gap: var(--spacing-s);
   }
 
+  .family-member {
+    font-weight: normal;
+  }
 
 
 

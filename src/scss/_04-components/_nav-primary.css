@@ -97,7 +97,7 @@
   transform: translate3d(0, 0, 0);
 }
 
-.c-nav-primary input[data-function*=swipe]:not(:checked) ~ div .sidebar {
+.c-nav-primary input[data-function*=swipe]:not(:checked) ~ .sidebar {
   display: none;
 }
 

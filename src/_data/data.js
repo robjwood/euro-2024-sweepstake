@@ -107,10 +107,6 @@ module.exports = async function() {
 
     const homeTeamCrest = `/images/crests/${homeTeam.replace(/ /g, '-').toLowerCase()}.svg`; 
     const awayTeamCrest = `/images/crests/${awayTeam.replace(/ /g, '-').toLowerCase()}.svg`;
-
-    function teamScore(team) {
-      return match.score.fullTime[team] !== undefined ? `${match.score.fullTime[team]}` : '';
-    }
     
     function dateString(date) {
       const fixtureDate = new Date(date).toLocaleDateString('en-GB', {
@@ -197,6 +193,28 @@ module.exports = async function() {
 
 
   let topScorers = getTopScorers;
+
+  // If the player has no assists, set the value to 0
+  topScorers.scorers.forEach(scorer => {
+    if (!scorer.assists) {
+      scorer.assists = 0;
+    }
+  });
+
+  // Order the scorers by most scored goals and then by most assists, then by last name
+  topScorers.scorers.sort((a, b) => {
+    if (a.numberOfGoals !== b.numberOfGoals) {
+      return b.numberOfGoals - a.numberOfGoals;
+    }
+  
+    if (a.assists !== b.assists) {
+      return b.assists - a.assists;
+    }
+  
+    // If the number of goals and assists are the same, sort by last name ascending
+    return a.player.lastName.localeCompare(b.player.lastName);
+  });
+
 
   return {
     allocatedTeams,

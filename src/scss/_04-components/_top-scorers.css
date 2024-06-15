@@ -1,0 +1,7 @@
+/* Family teams
+========================================================================== */
+
+  .player__details {
+    display: flex;
+    gap: var(--spacing-s);
+  }

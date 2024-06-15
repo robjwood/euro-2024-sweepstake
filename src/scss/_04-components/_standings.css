@@ -12,13 +12,10 @@
     }
 
   .group-table {
-    background-color: var(--white);
-    box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.4);
     width: 100%;
   }
 
     .group-table thead {
-      background-color: var(--color-primary-800);
       color: var(--color-primary-100);
     }
 

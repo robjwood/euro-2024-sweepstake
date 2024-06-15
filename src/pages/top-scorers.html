@@ -2,9 +2,9 @@
 title: Top scorers
 ---
 
-<section class="standings flow">
-  <table class="group-table">
-    <thead>
+<section class="flow">
+  <table class="c-card group-table">
+    <thead class="c-card__header">
       <tr>
         <th>Name</th>
         <th>Goals</th>
@@ -12,11 +12,14 @@ title: Top scorers
       </tr>
     </thead>
     <tbody>
-      {% for item in data.topScorers.scorers %}
-      <tr class="standings__team" >
-        <td>
-          <p>{{ item.player.name }}</p>
-          <img src="{{ item.team.crest }}" alt="Flag of {{ item.team.name }}" width="32" />
+      {% assign sortedTopScorer = data.topScorers | sort: 'player' | reverse | sort: 'assists' | reverse | sort: 'goals'  %}
+
+      
+      {% for item in sortedTopScorer %}
+      <tr>
+        <td class="player__details">
+          <img src="{{ item.crest }}" alt="Flag of {{ item.team }}" width="24" height="18" class="crest" />
+          <p>{{ item.player }}</p>
         </td>
         <td>
           <p>{{ item.goals }}</p>

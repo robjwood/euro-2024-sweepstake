@@ -3,13 +3,22 @@
 ===========================================*/
 
 .c-card {
-  background-color: white;
-  border: var(--spacing-2xs) solid var(--black);
-
-  img {
-    display: block; // Removes whitespace at the bottom
-  }
+  background-color: var(--white);
+  box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.4);
+  line-height: 1;
 }
+
+  .c-card__header {
+    background-color: var(--color-primary-700);
+    /*
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-s);
+    */
+    padding-inline: var(--spacing-l);
+    padding-block: var(--spacing-base);
+  }
+
 
 .c-card__title {
   font-size: var(--font-size-l);
@@ -29,27 +38,11 @@
   }
 
 
-// Modifiers
-
 .c-card--img-only {
-img {
-  height: 100%;
-  object-fit: cover;
 }
-}
-
 .c-card--text-left {
   grid-column-start: 2;
   grid-column-end: 4;
-
-  .c-card__link {
-    display: flex;
-    padding: var(--u-xs);
-
-    &> * {
-      flex: 1 0 0;
-    }
-  }
 }
 
 .c-card--no-border {

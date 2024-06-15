@@ -6,8 +6,8 @@ layout: page.njk
 
 <div class="o-css-grid">
   {% for item in data.allocatedTeams %}
-  <article class="family-teams">
-    <header>
+  <article class="c-card family-teams">
+    <header class="c-card__header">
       <img src="/images/family/{{ item.familyMember }}.svg" width="21" height="21" class="family-icon">
       <h2 class="family-teams__title">{{ item.familyMember }}</h2>
     </header>

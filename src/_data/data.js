@@ -78,7 +78,7 @@ module.exports = async function() {
   /* Get the fixtures
   ==========================================================================*/
   let getFixtures = await EleventyFetch (`${rootPath}/matches`, {
-    duration: "1d",
+    duration: "0s",
     type: "json",
     fetchOptions: {
       headers: {
@@ -182,7 +182,7 @@ module.exports = async function() {
   /* Get the top scorers
   ==========================================================================*/
   let getTopScorers = await EleventyFetch (`${rootPath}/scorers`, {
-    duration: "1d",
+    duration: "0s",
     type: "json",
     fetchOptions: {
       headers: {
@@ -191,29 +191,22 @@ module.exports = async function() {
     }
   });
 
-
-  let topScorers = getTopScorers;
-
-  // If the player has no assists, set the value to 0
-  topScorers.scorers.forEach(scorer => {
-    if (!scorer.assists) {
+  let topScorers = getTopScorers.scorers.map(scorer => {
+    // If assists in null, return 0
+    if (scorer.assists === null) {
       scorer.assists = 0;
     }
+
+    return {
+      player: scorer.player.lastName,  
+      crest: `/images/crests/${scorer.team.name.replace(/ /g, '-').toLowerCase()}.svg`,
+      team: scorer.team.name,
+      goals: scorer.goals,
+      assists: scorer.assists
+    }
   });
 
-  // Order the scorers by most scored goals and then by most assists, then by last name
-  topScorers.scorers.sort((a, b) => {
-    if (a.numberOfGoals !== b.numberOfGoals) {
-      return b.numberOfGoals - a.numberOfGoals;
-    }
-  
-    if (a.assists !== b.assists) {
-      return b.assists - a.assists;
-    }
-  
-    // If the number of goals and assists are the same, sort by last name ascending
-    return a.player.lastName.localeCompare(b.player.lastName);
-  });
+  console.log(topScorers);
 
 
   return {

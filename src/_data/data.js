@@ -142,8 +142,6 @@ module.exports = async function() {
     return acc;
   }, {});
 
-  console.log(fixtures);
-
 
   /* Get the standings
   ==========================================================================*/

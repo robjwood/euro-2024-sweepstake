@@ -1,0 +1,27 @@
+---
+title: Top scorers
+---
+
+<section class="standings flow">
+  <table class="group-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Goals</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in data.topScorers.scorers %}
+      <tr class="standings__team" >
+        <td>
+          <p>{{ item.player.name }}</p>
+          <img src="{{ item.team.crest }}" alt="Flag of {{ item.team.name }}" width="32" />
+        </td>
+        <td>
+          <p>{{ item.goals }}</p>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>

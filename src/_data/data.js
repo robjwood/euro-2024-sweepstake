@@ -102,8 +102,8 @@ module.exports = async function() {
     const homeTeam = match.homeTeam.name === null ? 'TBC' : match.homeTeam.name;
     const awayTeam = match.awayTeam.name === null ? 'TBC' : match.awayTeam.name;
     
-    const homeTeamScore = match.score.fullTime.homeTeam;
-    const awayTeamScore = match.score.fullTime.awayTeam;
+    const homeTeamScore = match.score.fullTime.home;
+    const awayTeamScore = match.score.fullTime.away;
 
     const homeTeamCrest = `/images/crests/${homeTeam.replace(/ /g, '-').toLowerCase()}.svg`; 
     const awayTeamCrest = `/images/crests/${awayTeam.replace(/ /g, '-').toLowerCase()}.svg`;
@@ -136,8 +136,8 @@ module.exports = async function() {
       homeTeamCrest,
       awayTeamCrest,
       time,
-      scoreHomeTeam: teamScore(homeTeamScore),
-      scoreAwayTeam: teamScore(awayTeamScore),
+      scoreHomeTeam: homeTeamScore,
+      scoreAwayTeam: awayTeamScore,
       familyMemberHome: assignFamilyMember(match.homeTeam.name),
       familyMemberAway: assignFamilyMember(match.awayTeam.name)
     });

@@ -14,32 +14,37 @@
 
     .fixture__details {
       display: flex;
-      grid-template-columns: 1fr auto 1fr;
+      justify-content: space-between;
       gap: var(--spacing-xs);
       padding: var(--spacing-l);
     }
 
-    .fixture__wrapper {
-      /*
-      display: grid;
-      align-items: center;
-      grid-template-columns: 1fr auto 1fr;
-      gap: var(--spacing-xs);
-      */
+    .fixture__details--wrapper {
+      flex-grow: 1;
     }
 
     .fixture__stage {
       font-size: var(--font-size-s);
-      color: var(--grey-500);
+      color: var(--color-primary-100);
       text-transform: uppercase;
       letter-spacing: 0.04rem;
+    }
+
+    .fixture__team {
+      display: flex;
+      gap: var(--spacing-s);
     }
 
     .fixture__home,
     .fixture__away {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: var(--spacing-s);
+    }
+
+    .fixture__time {
+      font-size: var(--font-size-base);
     }
 
     .fixture__score {

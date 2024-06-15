@@ -136,6 +136,8 @@
 
 .c-nav-primary .sidebar ul {
   background-color: var(--color-primary-800);
+  padding-top: var(--spacing-2xl);
+
 }
 
 .c-nav-primary .sidebar a {
@@ -178,6 +180,7 @@
 
   .c-nav-primary .sidebar ul {
     background-color: transparent;
+    padding-top: 0;
   }
 
   .c-nav-primary a:hover {

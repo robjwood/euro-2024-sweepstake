@@ -135,17 +135,20 @@ module.exports = async function() {
       scoreHomeTeam: homeTeamScore,
       scoreAwayTeam: awayTeamScore,
       familyMemberHome: assignFamilyMember(match.homeTeam.name),
-      familyMemberAway: assignFamilyMember(match.awayTeam.name)
+      familyMemberAway: assignFamilyMember(match.awayTeam.name),
+      status: match.status
     });
 
     return acc;
   }, {});
 
+  console.log(fixtures);
+
 
   /* Get the standings
   ==========================================================================*/
   let getStandings = await EleventyFetch (`${rootPath}/standings`, {
-    duration: "1d",
+    duration: "0s",
     type: "json",
     fetchOptions: {
       headers: {
@@ -205,9 +208,6 @@ module.exports = async function() {
       assists: scorer.assists
     }
   });
-
-  console.log(topScorers);
-
 
   return {
     allocatedTeams,

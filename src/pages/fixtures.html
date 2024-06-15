@@ -13,25 +13,30 @@ title: Fixtures
         </header>
         
         <div class="fixture__details">
-          <div class="fixture__wrapper flow">
+          <div class="fixture__details--wrapper flow">
             <div class="fixture__home">
-              <img src="{{ match.homeTeamCrest }}" alt="Flag of {{ match.homeTeam }}" width="24" height="18" class="crest" />
-              <p>{{ match.homeTeam }}</p>
-              <p class="family-member">{{ match.familyMemberHome }}</p> 
+              <div class="fixture__team">
+                <img src="{{ match.homeTeamCrest }}" alt="Flag of {{ match.homeTeam }}" width="24" height="18" class="crest" />
+                <p>{{ match.homeTeam }}</p>
+                <p class="family-member">{{ match.familyMemberHome }}</p> 
+              </div>
               <p class="fixture__score">{{ match.scoreHomeTeam }}</p>
             </div>
 
             
             <div class="fixture__away">
-              <img src="{{ match.awayTeamCrest }}" alt="Flag of {{ match.awayTeam }}" width="24" height="18" class="crest" />
-              <p>{{ match.awayTeam }}</p>
-              <p class="family-member">{{ match.familyMemberAway }}</p>
+              <div class="fixture__team">
+                <img src="{{ match.awayTeamCrest }}" alt="Flag of {{ match.awayTeam }}" width="24" height="18" class="crest" />
+                <p>{{ match.awayTeam }}</p>
+                <p class="family-member">{{ match.familyMemberAway }}</p>
+              </div>
               <p class="fixture__score">{{ match.scoreAwayTeam }}</p>
             </div>  
 
           </div>
-          
+          {% if match.status == 'TIMED' %}
           <span class="fixture__time">{{ match.time }}</span>
+          {% endif %}
         </div>
       </div>
       {% endfor %}

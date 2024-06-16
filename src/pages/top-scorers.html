@@ -14,7 +14,6 @@ title: Top scorers
     <tbody>
       {% assign sortedTopScorer = data.topScorers | sort: 'player' | reverse | sort: 'assists' | reverse | sort: 'goals'  %}
 
-      
       {% for item in sortedTopScorer %}
       <tr>
         <td class="player__details">

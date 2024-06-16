@@ -10,46 +10,11 @@
 
   .c-card__header {
     background-color: var(--color-primary-700);
-    /*
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-s);
-    */
     padding-inline: var(--spacing-l);
     padding-block: var(--spacing-base);
   }
 
 
-.c-card__title {
-  font-size: var(--font-size-l);
-}
-
-.c-card__body {
-  padding: var(--spacing-base) var(--spacing-base);
-}
-.c-card__link,
-.c-card__link:visited {
-  color: var(--black);
-  text-decoration: none;
-}
-
-  .c-card__copy {
-    margin-top: 0;
+  .c-card__title {
+    font-size: var(--font-size-l);
   }
-
-
-.c-card--img-only {
-}
-.c-card--text-left {
-  grid-column-start: 2;
-  grid-column-end: 4;
-}
-
-.c-card--no-border {
-  border: 0;
-}
-
-
-.c-card--sevenths > * {
-  width: 14.28%;
-}

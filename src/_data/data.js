@@ -207,6 +207,7 @@ module.exports = async function() {
     }
   });
 
+
   return {
     allocatedTeams,
     fixtures,

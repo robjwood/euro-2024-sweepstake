@@ -1,19 +1,30 @@
 /* Family teams
 ========================================================================== */
 
-  .family-teams header {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-s);
+  .family-teams__wrapper {
   }
 
-    .family-teams__title {
-      color: var(--color-primary-100);
+    .family-teams__details {
+      display: flex;
+      gap: var(--spacing-base);
+      padding: var(--spacing-l);
     }
 
-  .family-teams__body {
-    padding: var(--spacing-l);
-  }
+    .family-teams__details:nth-child(even) {
+      background-color: var(--grey-200);
+    }
+
+      .family-teams__member {
+        display: flex;
+        flex-basis: 8em;
+        gap: var(--spacing-s);
+      }
+
+        .family-teams__title {
+          color: var(--color-primary-900);
+        }
+
+
 
     .family-teams__team {
       display: flex;

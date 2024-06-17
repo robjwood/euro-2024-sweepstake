@@ -1,7 +1,7 @@
 module.exports = {
   logo: [
     {
-      text: 'Rob Wood',
+      text: 'Euro 2024',
       url: '/'
     },
   ],
@@ -11,16 +11,16 @@ module.exports = {
       url: '/fixtures/'
     },
     {
-      text: 'Standings',
-      url: '/standings/'
-    },
-    {
       text: 'Results',
       url: '/results/'
     },
     {
-      text: 'Top scorers',
-      url: '/top-scorers/'
+      text: 'Standings',
+      url: '/standings/'
     },
+    // {
+    //   text: 'Top scorers',
+    //   url: '/top-scorers/'
+    // },
   ]
 };

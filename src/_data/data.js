@@ -75,9 +75,19 @@ module.exports = async function() {
   
 
   
-  /* Get the fixtures
+  /* Matches
   ==========================================================================*/
-  let getFixtures = await EleventyFetch (`${rootPath}/matches`, {
+  let getFixtures = await EleventyFetch (`${rootPath}/matches?status=SCHEDULED`, {
+    duration: "0s",
+    type: "json",
+    fetchOptions: {
+      headers: {
+        'X-Auth-Token': `${process.env.API_KEY}`
+      }
+    }
+  });
+
+  let getResults = await EleventyFetch (`${rootPath}/matches?status=FINISHED`, {
     duration: "0s",
     type: "json",
     fetchOptions: {
@@ -98,13 +108,10 @@ module.exports = async function() {
 
     const group = match.stage === 'GROUP_STAGE' ? match.group.replace(/_/g, ' ').toLowerCase().replace(/\b\w/g, l => l.toUpperCase()) : match.stage.replace(/_/g, ' ').toLowerCase().replace(/\b\w/g, l => l.toUpperCase());
 
-    // Assign a fmaily member to each team    
+    // Assign a family member to each team    
     const homeTeam = match.homeTeam.name === null ? 'TBC' : match.homeTeam.name;
     const awayTeam = match.awayTeam.name === null ? 'TBC' : match.awayTeam.name;
     
-    const homeTeamScore = match.score.fullTime.home;
-    const awayTeamScore = match.score.fullTime.away;
-
     const homeTeamCrest = `/images/crests/${homeTeam.replace(/ /g, '-').toLowerCase()}.svg`; 
     const awayTeamCrest = `/images/crests/${awayTeam.replace(/ /g, '-').toLowerCase()}.svg`;
     
@@ -132,8 +139,6 @@ module.exports = async function() {
       homeTeamCrest,
       awayTeamCrest,
       time,
-      scoreHomeTeam: homeTeamScore,
-      scoreAwayTeam: awayTeamScore,
       familyMemberHome: assignFamilyMember(match.homeTeam.name),
       familyMemberAway: assignFamilyMember(match.awayTeam.name),
       status: match.status
@@ -142,6 +147,58 @@ module.exports = async function() {
     return acc;
   }, {});
 
+  // Group results by date
+  let groupedResults = getResults.matches.reduce((acc, match) => {
+    const group = match.stage === 'GROUP_STAGE' ? match.group.replace(/_/g, ' ').toLowerCase().replace(/\b\w/g, l => l.toUpperCase()) : match.stage.replace(/_/g, ' ').toLowerCase().replace(/\b\w/g, l => l.toUpperCase());
+  
+    // Assign a family member to each team
+    const homeTeam = match.homeTeam.name === null ? 'TBC' : match.homeTeam.name;
+    const awayTeam = match.awayTeam.name === null ? 'TBC' : match.awayTeam.name;
+  
+    const homeTeamScore = match.score.fullTime.home;
+    const awayTeamScore = match.score.fullTime.away;
+  
+    const homeTeamCrest = `/images/crests/${homeTeam.replace(/ /g, '-').toLowerCase()}.svg`; 
+    const awayTeamCrest = `/images/crests/${awayTeam.replace(/ /g, '-').toLowerCase()}.svg`;
+  
+    function dateString(date) {
+      const fixtureDate = new Date(date).toLocaleDateString('en-GB', {
+        weekday: 'short',
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric'
+      });
+  
+      return fixtureDate.replace(/, /g, " ");
+    }
+  
+    if (!acc[dateString(match.utcDate)]) {
+      acc[dateString(match.utcDate)] = [];
+    }
+    
+    acc[dateString(match.utcDate)].push({
+      group,
+      homeTeam,
+      awayTeam,
+      homeTeamCrest,
+      awayTeamCrest,
+      scoreHomeTeam: homeTeamScore,
+      scoreAwayTeam: awayTeamScore,
+      familyMemberHome: assignFamilyMember(match.homeTeam.name),
+      familyMemberAway: assignFamilyMember(match.awayTeam.name),
+      status: match.status
+    });
+  
+    return acc;
+  }, {});
+  
+  let results = Object.keys(groupedResults).map(date => ({
+    date,
+    matches: groupedResults[date]
+  }));
+  
+  // Sort results by reverse date order
+  results.sort((a, b) => new Date(b.date) - new Date(a.date));
 
   /* Get the standings
   ==========================================================================*/
@@ -163,6 +220,7 @@ module.exports = async function() {
         return {
           position: team.position,
           team: team.team.name,
+          shortName: team.team.tla,
           crest: `/images/crests/${team.team.name.replace(/ /g, '-').toLowerCase()}.svg`,
           playedGames: team.playedGames,
           won: team.won,
@@ -211,6 +269,7 @@ module.exports = async function() {
   return {
     allocatedTeams,
     fixtures,
+    results,
     standings,
     topScorers,
   };

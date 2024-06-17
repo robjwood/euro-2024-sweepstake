@@ -1,12 +1,14 @@
 ---
-title: Fixtures
+title: Results
 ---
 
-{% for item in data.fixtures %}
+{% assign sortedResults = data.results %}
+
+{% for item in sortedResults %}
   <section class="fixture flow">
-    <h2>{{ item[0] }}</h2>
+    <h2>{{ item.date }}</h2>
     <div class="fixture__grid">
-      {% for match in item[1] %}
+      {% for match in item.matches %}
       <div class="c-card">
         <header class="c-card__header">
           <span class="fixture__stage">{{ match.group }}</span>
@@ -20,6 +22,7 @@ title: Fixtures
                 <p>{{ match.homeTeam }}</p>
                 <p class="family-member">{{ match.familyMemberHome }}</p> 
               </div>
+              <p class="fixture__score">{{ match.scoreHomeTeam }}</p>
             </div>
 
             
@@ -29,12 +32,10 @@ title: Fixtures
                 <p>{{ match.awayTeam }}</p>
                 <p class="family-member">{{ match.familyMemberAway }}</p>
               </div>
+              <p class="fixture__score">{{ match.scoreAwayTeam }}</p>
             </div>  
 
           </div>
-          {% if match.status == 'TIMED' %}
-          <span class="fixture__time">{{ match.time }}</span>
-          {% endif %}
         </div>
       </div>
       {% endfor %}

@@ -18,9 +18,9 @@ module.exports = {
       text: 'Standings',
       url: '/standings/'
     },
-    // {
-    //   text: 'Top scorers',
-    //   url: '/top-scorers/'
-    // },
+    {
+      text: 'Top scorers',
+      url: '/top-scorers/'
+    },
   ]
 };

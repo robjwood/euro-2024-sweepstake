@@ -240,7 +240,7 @@ module.exports = async function() {
 
   /* Get the top scorers
   ==========================================================================*/
-  let getTopScorers = await EleventyFetch (`${rootPath}/scorers`, {
+  let getTopScorers = await EleventyFetch (`${rootPath}/scorers?limit=100`, {
     duration: "0s",
     type: "json",
     fetchOptions: {
@@ -256,6 +256,8 @@ module.exports = async function() {
       scorer.assists = 0;
     }
 
+    
+
     return {
       player: scorer.player.lastName,  
       crest: `/images/crests/${scorer.team.name.replace(/ /g, '-').toLowerCase()}.svg`,
@@ -265,7 +267,19 @@ module.exports = async function() {
     }
   });
 
+  // Order the top scorers by goals, then assists, then name
+  topScorers.sort((a, b) => {
+    if (a.goals !== b.goals) {
+      return b.goals - a.goals;
+    } else if (a.assists !== b.assists) {
+      return b.assists - a.assists;
+    }
+    return a.player.localeCompare(b.player);
+  });
 
+
+  
+  
   return {
     allocatedTeams,
     fixtures,

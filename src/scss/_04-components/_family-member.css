@@ -10,5 +10,12 @@
     padding: var(--spacing-2xs) var(--spacing-xs);
   }
 
+  .family-lozenge {
+    display: flex;
+    align-items: center;
+    background: var(--grey-200);
+    border-radius: var(--spacing-base);
+    padding: var(--spacing-2xs) var(--spacing-s);
+  }
 
 

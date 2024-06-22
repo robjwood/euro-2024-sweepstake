@@ -52,9 +52,15 @@
       }
 
       .fixture__team {
-        display: flex;
+        display: grid;
         gap: var(--spacing-s);
+        justify-items: start;
       }
+
+        .fixture__team-details {
+          display: flex;
+          gap: var(--spacing-xs);
+        }
 
       .fixture__family-team {
         display: flex;

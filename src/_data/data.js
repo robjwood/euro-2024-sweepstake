@@ -87,16 +87,6 @@ module.exports = async function() {
     }
   });
 
-  let getResults = await EleventyFetch (`${rootPath}/matches?status=FINISHED`, {
-    duration: "0s",
-    type: "json",
-    fetchOptions: {
-      headers: {
-        'X-Auth-Token': `${process.env.API_KEY}`
-      }
-    }
-  });
-
   // Group fixtures by date 
   let fixtures = getFixtures.matches.reduce((acc, match) => {
     // Create a date string and force it to show BST on the server
@@ -112,7 +102,9 @@ module.exports = async function() {
     const homeTeam = match.homeTeam.name === null ? 'TBC' : match.homeTeam.name;
     const awayTeam = match.awayTeam.name === null ? 'TBC' : match.awayTeam.name;
     
-    const homeTeamCrest = `/images/crests/${homeTeam.replace(/ /g, '-').toLowerCase()}.svg`; 
+    // If the homeTeam is TBC, don't render the image, otherwise render the image
+    const homeTeamCrest = match.homeTeam.name === null ? '' : `/images/crests/${homeTeam.replace(/ /g, '-').toLowerCase()}.svg`;
+
     const awayTeamCrest = `/images/crests/${awayTeam.replace(/ /g, '-').toLowerCase()}.svg`;
     
     function dateString(date) {
@@ -146,6 +138,17 @@ module.exports = async function() {
 
     return acc;
   }, {});
+
+
+  let getResults = await EleventyFetch (`${rootPath}/matches?status=FINISHED`, {
+    duration: "0s",
+    type: "json",
+    fetchOptions: {
+      headers: {
+        'X-Auth-Token': `${process.env.API_KEY}`
+      }
+    }
+  });
 
   // Group results by date
   let groupedResults = getResults.matches.reduce((acc, match) => {

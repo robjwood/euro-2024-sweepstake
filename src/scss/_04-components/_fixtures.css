@@ -11,29 +11,55 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
+.fixture__wrapper {
+  max-width: calc(var(--spacing-3xl) * 8);
+}
+
 
     .fixture__details {
       display: flex;
       justify-content: space-between;
-      gap: var(--spacing-xs);
+      gap: var(--spacing-base);
+      height: 100%;
+    }
+
+    .fixture__teams {
+      flex-grow: 1;
       padding: var(--spacing-l);
     }
 
-    .fixture__details--wrapper {
-      flex-grow: 1;
-    }
-
-    .fixture__stage {
-      font-size: var(--font-size-s);
-      color: var(--color-primary-100);
-      text-transform: uppercase;
-      letter-spacing: 0.04rem;
-    }
-
-    .fixture__team {
+    .fixture__info {
+      --flow-space: var(--spacing-xs);
+      background-color: var(--color-primary-200);
       display: flex;
-      gap: var(--spacing-s);
+      align-items: center;
+      flex-direction: column;
+      padding: var(--spacing-l);
     }
+
+      .fixture__stage {
+        background-color: var(--color-primary-200);
+        border-radius: var(--border-radius-xs);
+        color: var(--color-primary-500);
+        font-size: var(--font-size-s);
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      .fixture__time {
+        font-size: var(--font-size-l);
+        font-weight: bold;
+      }
+
+      .fixture__team {
+        display: flex;
+        gap: var(--spacing-s);
+      }
+
+      .fixture__family-team {
+        display: flex;
+        gap: var(--spacing-xs);
+      }
 
     .fixture__home,
     .fixture__away {
@@ -41,10 +67,6 @@
       align-items: center;
       justify-content: space-between;
       gap: var(--spacing-s);
-    }
-
-    .fixture__time {
-      font-size: var(--font-size-base);
     }
 
     .fixture__score {

@@ -5,35 +5,54 @@ title: Fixtures
 {% for item in data.fixtures %}
   <section class="fixture flow">
     <h2>{{ item[0] }}</h2>
-    <div class="fixture__grid">
+    <div class="fixture__wrapper flow">
       {% for match in item[1] %}
       <div class="c-card">
-        <header class="c-card__header">
-          <span class="fixture__stage">{{ match.group }}</span>
-        </header>
-        
         <div class="fixture__details">
-          <div class="fixture__details--wrapper flow">
+          <div class="fixture__teams flow">
             <div class="fixture__home">
               <div class="fixture__team">
-                <img src="{{ match.homeTeamCrest }}" alt="Flag of {{ match.homeTeam }}" width="24" height="18" class="crest" />
-                <p>{{ match.homeTeam }}</p>
-                <p class="family-member">{{ match.familyMemberHome }}</p> 
+                {% if match.homeTeam != 'TBC' %}
+                  <img src="{{ match.homeTeamCrest }}" alt="Flag of {{ match.homeTeam }}" width="24" height="18" class="crest" />
+                {% endif %}
+                
+                <div class="fixture__family-team">
+                  <p>{{ match.homeTeam }}</p>
+                  
+                  {% if match.homeTeam != 'TBC' %}
+                    <img src="/images/family/{{ match.familyMemberHome }}.svg" width="21" height="21" class="family-icon">
+                    <p class="family-member">{{ match.familyMemberHome }}</p> 
+                  {% endif %}
+                </div>
               </div>
             </div>
-
             
             <div class="fixture__away">
               <div class="fixture__team">
-                <img src="{{ match.awayTeamCrest }}" alt="Flag of {{ match.awayTeam }}" width="24" height="18" class="crest" />
-                <p>{{ match.awayTeam }}</p>
-                <p class="family-member">{{ match.familyMemberAway }}</p>
+                {% if match.awayTeam != 'TBC' %}
+                  <img src="{{ match.awayTeamCrest }}" alt="Flag of {{ match.awayTeam }}" width="24" height="18" class="crest" />
+                {% endif %}
+
+                <div class="fixture__family-team">
+                  <p>{{ match.awayTeam }}</p>
+
+                  {% if match.awayTeam != 'TBC' %}
+                    <img src="/images/family/{{ match.familyMemberAway }}.svg" width="21" height="21" class="family-icon">
+                    <p class="family-member">{{ match.familyMemberAway }}</p>
+                  {% endif %}
+                </div>
+
               </div>
             </div>  
-
           </div>
+
           {% if match.status == 'TIMED' %}
-          <span class="fixture__time">{{ match.time }}</span>
+          <div class="fixture__info flow">
+            <span class="fixture__stage">{{ match.group }}</span>
+            <span class="fixture__time">
+              {{ match.time }}
+            </span>
+          </div>
           {% endif %}
         </div>
       </div>

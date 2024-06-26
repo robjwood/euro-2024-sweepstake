@@ -23,6 +23,17 @@
       height: 100%;
     }
 
+    .fixture__details.results {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .fixture__details.results .fixture__info {
+      flex-direction: initial;
+      justify-content: center;
+      padding: var(--spacing-s);
+    }
+
     .fixture__teams {
       flex-grow: 1;
       padding: var(--spacing-l);
@@ -30,17 +41,18 @@
 
     .fixture__info {
       --flow-space: var(--spacing-xs);
-      background-color: var(--color-primary-200);
+      background-color: var(--grey-200);
       display: flex;
       align-items: center;
       flex-direction: column;
       padding: var(--spacing-l);
     }
+    
 
       .fixture__stage {
         background-color: var(--color-primary-200);
         border-radius: var(--border-radius-xs);
-        color: var(--color-primary-500);
+        color: var(--grey-700);
         font-size: var(--font-size-s);
         text-transform: uppercase;
         text-align: center;

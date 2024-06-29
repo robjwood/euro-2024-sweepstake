@@ -50,7 +50,6 @@
     
 
       .fixture__stage {
-        background-color: var(--color-primary-200);
         border-radius: var(--border-radius-xs);
         color: var(--grey-700);
         font-size: var(--font-size-s);

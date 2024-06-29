@@ -7,6 +7,10 @@ module.exports = {
   ],
   top: [
     {
+      text: 'Teams',
+      url: '/teams/'
+    },
+    {
       text: 'Fixtures',
       url: '/fixtures/'
     },

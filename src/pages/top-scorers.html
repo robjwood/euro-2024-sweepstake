@@ -12,22 +12,8 @@ title: Top scorers
       </tr>
     </thead>
     <tbody>
-      <!-- {% assign sortedTopScorer = data.topScorers | sort: 'player' | reverse | sort: 'assists' | reverse | sort: 'goals'  %} -->
-      <!-- {% assign sortedTopScorer = data.topScorers %} -->
-
       {% for item in data.topScorers %}
-      <tr>
-        <td class="player__details">
-          <img src="{{ item.crest }}" alt="Flag of {{ item.team }}" width="24" height="18" class="crest" />
-          <p>{{ item.player }}</p>
-        </td>
-        <td>
-          <p>{{ item.goals }}</p>
-        </td>
-        <td>
-          <p>{{ item.assists }}</p>
-        </td>
-      </tr>
+        {% include "topScorers.njk" %}
       {% endfor %}
     </tbody>
   </table>

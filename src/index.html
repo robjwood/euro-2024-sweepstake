@@ -4,8 +4,33 @@ description: Euro 2024 sweepstake
 layout: page.njk
 ---
 
-<h2>Next fixtures</h2>
+<div class="grid-2-col">
+  <div class="flow">
+    <h2>Next fixtures</h2>
+    {% for item in data.fixtures limit:1  %}
+      {% include "fixtures.njk" %}
+    {% endfor %}
+  </div>
 
-{% for item in data.fixtures limit:1  %}
-  {% include "fixtures.njk" %}
-{% endfor %}
+
+  <div class="flow">
+    <h2>Top scorers</h2>
+    <section class="flow">
+      <table class="c-card group-table">
+        <thead class="c-card__header">
+          <tr>
+            <th>Name</th>
+            <th>Goals</th>
+            <th>Assists</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in data.topScorers limit:3 %}
+            {% include "topScorers.njk" %}
+          {% endfor %}
+        </tbody>
+      </table>
+    </section>
+    
+  </div>
+</div>
